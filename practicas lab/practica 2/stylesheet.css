@@ -1,0 +1,46 @@
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{ 
+    color: red;
+}
+h2{
+    color: #0000ff;
+}
+
+li{
+    margin: 10px;
+}
+#changeColor:hover{
+    color:orangered
+}
+#blacky{
+    font-weight: bold;
+}
+.linktest:hover{
+    color: brown;
+}
+a:visited{
+    color: gold;
+}
+.divbox{
+    background-color: skyblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    float: left;
+    width: 33%;
+}
+
+th{
+    text-align: center;
+    background-color: olivedrab;
+    color: aliceblue;
+    border-spacing: 0ch;
+}
+tr:nth-child(even) {
+    background-color: lightgrey;
+  }
+td{
+    text-align: center;
+}
