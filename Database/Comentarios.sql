@@ -1,0 +1,27 @@
+use NOTICIERO_WEB;
+
+CREATE TABLE IF NOT EXISTS COMENTARIOS(
+ID_COMENTARIO INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Comentario varchar(250) not null,
+fecha_creacion datetime not null,
+lastupdate datetime,
+lastupdate_by int ,
+FOREIGN KEY(lastupdate_by) REFERENCES USUARIO(ID_user),
+active boolean not null
+);
+
+
+CREATE TABLE IF NOT EXISTS COMENTARIOS_NOTICIA(
+ID_COMENTARIO INT NOT NULL,
+ID_NOTICIA INT NOT NULL,
+PRIMARY KEY(ID_COMENTARIO,ID_NOTICIA),
+fecha_creacion datetime not null,
+lastupdate datetime,
+lastupdate_by int COMMENT "USUARIO QUE DIO DE ALTA EL REGISTRO" ,
+FOREIGN KEY(lastupdate_by) REFERENCES USUARIO(ID_user),
+active boolean not null,
+PARENT_ID INT COMMENT "comentario padre si es que lo hay  DE LA TABLA COMENTARIOS",
+INDEX(PARENT_ID),
+FOREIGN KEY(ID_COMENTARIO) REFERENCES COMENTARIOS(ID_COMENTARIO),
+FOREIGN KEY(ID_NOTICIA) REFERENCES NOTICIAS(ID_Noticia)
+);
