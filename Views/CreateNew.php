@@ -10,15 +10,19 @@
               
                 <div class="mb-3">
                     <label for="InputEmail" class="form-label">Descripcion corta de la Noticia</label>
-                    <input type="email" class="form-control emailInput" id="InputEmail" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label" >Password</label>
-                    <input type="password" class="form-control" id="InputPassword" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu password registrado" >
+                    <label for="InputPassword" class="form-label" >Fecha de la noticia</label>
+                    <input type="date" class="form-control" id="" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu password registrado" >
                 </div> 
                  <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Foto de Perfil:</label><br>
+                    <label for="filephoto" class="form-label">Imagen de la noticia</label><br>
                     <input type="file" name="fileToUpload" id="fileToUpload">
+                </div>
+                <div>
+                    <label for="News">Cuerpo de la noticia</label>
+                    <textarea autocapitalize="sentences"></textarea>
                 </div>
                 <hr>
                 <button type="submit"  href="./Register.html" class="btn btn-primary">Crear Noticia</button>
