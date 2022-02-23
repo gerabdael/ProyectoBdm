@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.homeqst{
+    margin: 10%;
+    padding: 10px;
+    box-sizing: content-box;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 250px;
+}
+
+.wrapper{
+    margin: 20px 0;
+    width: auto;
+}
+
+.cards_wrap{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.card_item{
+    width: 100%;
+    padding: 10px;
+}
+
+.card_inner{
+border-radius: 15px;
+box-shadow:  0px 0px 15px 0px rgb(255, 255, 255);
+background: rgb(59, 58, 58);
+padding:10px;
+}
+
+.card_top{
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+  position: 10rem;
+}
+
+.card_bottom{
+  padding: 0px;
+}
+
+.card_category{
+  text-align: end;
+  text-decoration-color: gray;
+}
+
+.card_info{
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+}
+
+.card_creator{
+  text-transform: capitalize;
+  text-align: end;
+}
+
+.card_buttons{
+  text-align: left;
+  padding-left: 5px;
+}
+
+.bg{
+    background: #ffffff;
+
+   
+    width: auto;
+    height: auto;
+    background-size: auto;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+
+    min-height: 50rem;
+    font-size: 14px;
+
+  }
+  
+  img{
+     width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+.asksmt{
+  background:rgb(0, 0, 0);
+  text-align:center;
+  text-align: start;
+  color:white;
+  margin: 15px;
+  padding: 8rem;
+  padding-left: 25%;
+  padding-right: 25%;
+  position:absolute ;
+  top:50px;
+  right: 20%;
+  border-radius: 15px;
+  box-shadow: black;
+
+
+}
+
+.askcreador{
+  background:rgb(213, 238, 103);
+  margin: 0px 0;
+  width: auto;
+
+  border-radius: 15px;
+  box-shadow: black;padding:10px;
+}
+
+.ask_buttons{
+  text-align: center;
+ 
+}
+
+.bs-docs-section{
+    padding-top: 50px;
+}

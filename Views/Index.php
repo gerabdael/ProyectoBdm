@@ -59,6 +59,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col">
             <div class="card bg-dark text-white">
                 <img src="../Content/Pikachu.jpg" class="card-img" alt="...">

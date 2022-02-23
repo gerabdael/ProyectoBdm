@@ -4898,6 +4898,7 @@ fieldset:disabled .btn {
 }
 
 .card {
+  padding-top: 25px;
   position: relative;
   display: -ms-flexbox;
   display: flex;
