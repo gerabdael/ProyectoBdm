@@ -11,7 +11,7 @@
                         <label for="InputPassword" class="form-label" >Password</label>
                         <input type="password" class="form-control" id="InputPassword" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu password registrado" >
                     </div>
-            <!--         <div class="mb-3 form-check">
+                    <!--         <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="Check1">
                         <label class="form-check-label" for="Check1">Check me out</label>
                     </div> -->
