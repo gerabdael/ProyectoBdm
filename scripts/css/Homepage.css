@@ -141,3 +141,6 @@ body {
 .bs-docs-section{
     padding-top: 50px;
 }
+.invalidate{
+  border-color: salmon;
+}

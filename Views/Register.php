@@ -3,7 +3,7 @@
     <div class="card fa fa-align-center border-primary mb-3"  style="margin-top:10rem;">
         <h3 class="card-header">Registrarse</h3>
         <div class="card-body">
-            <form> <i class="fa fa-align-center" aria-hidden="true"></i>
+            <form> <i class="fa fa-align-center" aria-hidden="true" name="form"></i>
 
                  <div class="mb-3">
                     <label for="InputUser" class="form-label">Usuario</label>
@@ -47,7 +47,7 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
 
-                <a type="submit" class="btn btn-primary">Registrarse</a>
+                <a type="submit" class="btn btn-primary" id="registerbutton">Registrarse</a>
 
             </form>
         </div>
