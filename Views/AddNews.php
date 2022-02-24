@@ -8,16 +8,20 @@
 
                  <div class="mb-3">
                     <label for="InputUser" class="form-label">Titulo </label>
-                    <input type="text" class="form-control nameInput" id="InputUser" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                    <input type="text" class="form-control nameInput" id="Inputtitle" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
                 </div>
 
                 <div class="mb-3">
                     <label for="InputEmail" class="form-label">Descripcion</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3" style="height: 53px;"></textarea>
+                    <textarea class="form-control" id="DescriptionTextarea" rows="3" style="height: 53px;"></textarea>
                 </div>
-           
+                <div class="mb-3">
+                    <label for="InputEmail" class="form-label">Noticia</label>
+                    <textarea class="form-control" id="newsTextarea" rows="3" style="height: 53px;"></textarea>
+                </div>
+
                 <label for="date">Fecha de publicacion:</label><div></div>
-                <input type="date" id="start" name="fnac" min="1960-01-01" max="2020-12-31" required autofocus>
+                <input type="date" id="start" name="fnac" id="newsDate" min="1960-01-01" max="2020-12-31" required autofocus>
 
                 <hr>
                  <div class="mb-3">
@@ -33,7 +37,7 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
 
-                <a type="submit" class="btn btn-primary">Publicar</a>
+                <a type="submit" class="btn btn-primary" id="publishNew">Publicar</a>
 
             </form>
         </div>

@@ -17,17 +17,6 @@ $(document).on("focus", "input", function(e){
     }
 })
 
-
-/* $(document).on("onclick", "#loginbutton", function(e){
-    var email = $("#InputEmail").val();
-    var password= $("#InputPassword").val();
-    if(email == "" && password == ""){
-        alert("campos sin llenar");
-    }
-    else{
-        alert("bienvenido :D");
-    }
-}) */
 $("#loginbutton").click(function(e){
     var email = $("#InputEmail").val();
     var password= $("#InputPassword").val();
@@ -41,6 +30,19 @@ $("#loginbutton").click(function(e){
 })
 $("#registerbutton").click(function(e){
     validar();
+})
+$("#publishNew").click(function(e){
+    var title = $("#Inputtitle").val();
+    var descp= $("#DescriptionTextarea").val();
+    var newsDate = $("#newsDate").val();
+    var news = $("newsTextarea").val();
+    if(title === "" || descp === ""|| newsDate===""||news===""){
+        alert("campos sin llenar");
+    }
+    else{
+        alert("Historia Publicada");
+        window.location.href="Index.php";
+    }
 })
 
 function validar() {
