@@ -47,7 +47,7 @@ class RegisterContr extends Register{
         private function empyInputs(){
             $result;
             if(empty($this->user)||empty($this->completeName)||empty($this->email)||empty($this->password)||empty($this->confirmPassword)||
-            empty($this->telephone)||empty($this->birthdayDate)){
+            empty($this->telephone)){
                 $result = false;
             }else{
                 $result=true;
