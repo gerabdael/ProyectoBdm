@@ -2,17 +2,17 @@ CREATE DATABASE IF NOT EXISTS NOTICIERO_WEB;
 use NOTICIERO_WEB;
 
 CREATE TABLE IF NOT EXISTS USER_TYPES(
-ID_user_type INT NOT NULL AUTO_INCREMENT PRIMARY KEY comment "llave primaria",
+ID_user_type INT NOT NULL AUTO_INCREMENT PRIMARY KEY comment "llave primaria del tipo de usuario",
 descripcion varchar(100) not null comment "describe al tipo de usuario",
 creationdate datetime not null comment "fecha de alta del registro",
-active boolean not null default true
+active boolean not null default true comment "estado activo del tipo de usuario"
 );
 
 CREATE TABLE IF NOT EXISTS USER_STATUS(
 ValueUser char NOT NULL PRIMARY KEY comment "llave primaria",
 descripcion varchar(100) not null comment "describe el status de usuario",
 creationdate datetime not null comment "fecha de alta del registro",
-active boolean not null default true
+active boolean not null default true comment "Checa el estado activo"
 );
 
 
@@ -28,19 +28,19 @@ select * from USER_TYPES;
 select * from USER_STATUS;
 
 CREATE TABLE IF NOT EXISTS USUARIO(
-ID_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY comment "llave primaria",
-nombreCompleto varchar(150) not null,
-email varchar(100) not null,
-contraseña varchar(100) not null,
-FotoUser mediumBLOB ,
-alias varchar(100) not null,
-diaregistro datetime not null,
-telefono int not null,
-activo boolean not null,
+ID_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY comment "llave primaria, id del usuario",
+nombreCompleto varchar(150) not null comment "Nombre Real completo del usuario",
+email varchar(100) not null comment "email del usuario",
+contraseña varchar(100) not null comment "Contraseña del usuario",
+FotoUser mediumBLOB comment "Foto del usuario",
+alias varchar(100) not null comment "alias del usuario",
+diaregistro datetime not null comment "fecha de alta del usuario",
+telefono int not null comment "numero telefonico del usuario",
+activo boolean not null comment "Estado activo",
 
-tipoU int not null comment "tipo de usuario que es 1-editor| 2-reportero | 3-usernorm",
+tipoU int not null comment "Tabla asociativa | Tipo de usuario que es 1-editor| 2-reportero | 3-usernorm",
 Foreign key(tipoU) references USER_TYPES(ID_user_type),
-StatusU char not null comment "status del usuario solo puede ser A B I",
+StatusU char not null comment "Tabla asociativa | status del usuario solo puede ser A B I",
 Foreign key(StatusU) references USER_STATUS(ValueUser),
 creadopor int not null comment "usuario que dio de alta el registro",
 lastupdateby int comment "ultimo usuario que edito el registro",
