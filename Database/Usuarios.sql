@@ -34,6 +34,7 @@ email varchar(100) not null,
 contraseña varchar(100) not null,
 FotoUser mediumBLOB ,
 alias varchar(100) not null,
+diaregistro datetime not null,
 telefono int not null,
 activo boolean not null,
 
