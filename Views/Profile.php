@@ -1,5 +1,17 @@
 <?php include('./header2.php')?>  
 
+<script>
+$(document).ready(function(){
+
+leer();
+
+});
+
+function leer(){
+$("#VerNombre").val(localStorage.getItem("nombre"));
+}
+
+</script>
 
     <div class="container">
         <div class="main">
@@ -57,7 +69,7 @@
                                     <h5>Nombre Completo</h5>
                                 </div>
                                 <div class="col-md-9 ">
-                                        <h3> Test </h3>
+                                <input type="text" id="VerNombre" style="color:red;" ></input><br>
                                 </div>
                             </div>
                             <hr>
