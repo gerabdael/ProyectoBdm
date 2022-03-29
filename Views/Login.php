@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="../scripts/css/Homepage.css" rel="stylesheet">
     <link href="../scripts/css/LogRegs.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../scripts/jQuery/jquery-3.6.0.min.js"></script>
+    
     
     <!-- <link rel="Stylesheet" href="/scripts/css/bootstrap.css"/> -->
         <header>
@@ -45,7 +48,13 @@
     </head>      
     <body class="bodyextra">
 
-        
+    <script>
+
+$(document).ready(function(){
+    localStorage.setItem("email:",$("#email").val());
+}
+);         
+                        </script>
             
 
             <div class="BoxContent">
@@ -54,6 +63,7 @@
                         if(isset($_SESSION["user_email"])){
                     ?>
                         <h3 class="card-header"><?php echo $_SESSION["user-email"]?></h3> 
+                       
                     <?php
                         }
                         else {

@@ -19,11 +19,14 @@ class Login extends Dbh{
         if($checkPwd == false){
             $stmt = null;
             header("location: ../Views/Login.php?error=incorrectPassword");
+
+          
+
             exit();    
         }else if($checkPwd==true){
             session_start();
             $_SESSION["user-email"]= $email;
-
+      
         }
         $stmt = null;
         }
