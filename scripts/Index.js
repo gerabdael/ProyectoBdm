@@ -55,9 +55,9 @@ function validar() {
 
     // El input que queremos validar
     const usuario = $("#InputUser").val();
-    const password = $('InputPassword').val();
-    const aEmail = $('InputEmail').val();
-    const Nombre = $('InputName').val();
+    const password = $('#InputPassword').val();
+    const aEmail = $('#InputEmail').val();
+    const Nombre = $('#InputName').val();
    
 
     //El div con el mensaje de advertencia:
@@ -87,7 +87,7 @@ function validar() {
         } else
         {
             alert("Contraseña no valida: Recuerda que la contraseña debe de tener: 8 caracteres, 1 numero, 1 mayuscula, 1 caracter especial (¡”#$%&/=’?¡¿:;,.-_+*{][}) y sin espacios en blanco.");
-            document.getElementById('InputPassword').value = "";
+           // document.getElementById('InputPassword').value = "";
             isValid_password = false;
         }
     }

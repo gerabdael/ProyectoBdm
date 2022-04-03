@@ -1,8 +1,8 @@
-<?php 
+<?php    
 include "../Controller/dbh.classes.php";
 class Login extends Dbh{
     protected function sign_in($email,$password){
-        $stmt = $this->connect()->prepare('SELECT contraseña FROM Usuario where email=?;');
+        $stmt = $this->connect()->prepare('SELECT contraseña FROM usuario where email=?;');
         if (!$stmt-> execute(array($email))) {
             $stmt = null;
             header("location: ../Views/Login.php?error=stmtfailed");
@@ -25,10 +25,10 @@ class Login extends Dbh{
             exit();    
         }else if($checkPwd==true){
             session_start();
-            $_SESSION["user-email"]= $email;
-      
+            $_SESSION["user_email"]= $email;
         }
         $stmt = null;
         }
+
 }
 ?>

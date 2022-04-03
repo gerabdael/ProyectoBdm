@@ -21,17 +21,22 @@ class RegisterContr extends Register{
 
         public function registerUser(){
             if($this->empyInputs()== false){
-                header("location: ../Views/Register.phperror=emptyInput");
+                header("location: ../Views/Register.php?error=emptyInput");
+                exit();
+            }
+            if($this->chkpswrd()==false){
+                header("location: ../Views/Register.php?error=invalidPwd");
                 exit();
             }
             if($this->matchPwd()==false){
-                header("location: ../Views/Register.phperror=matchPwd");
+                header("location: ../Views/Register.php?error=matchPwd");
                 exit();
             }
             if($this->checkUser($this->email,$this->user)==false){
-                header("location: ../Views/Register.phperror=userCheck");
+                header("location: ../Views/Register.php?error=userCheck");
                 exit();
-            }
+            } 
+            
             $this->register($this->completeName,$this->email,$this->password,$this->user,$this->telephone);
         }
         private function matchPwd(){
@@ -40,6 +45,18 @@ class RegisterContr extends Register{
                 $result = false;
             }else{
                 $result= true;
+            }
+            return $result;
+        }
+
+        private function chkpswrd(){
+            $result;
+            $regx="^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
+            $match = preg_match($regx,$this->password);
+            if($match==0){
+                $result=false;
+            }else{
+                $result=true;
             }
             return $result;
         }
@@ -54,5 +71,7 @@ class RegisterContr extends Register{
             }
             return $result;
         }
+
+
     }  
 ?>
