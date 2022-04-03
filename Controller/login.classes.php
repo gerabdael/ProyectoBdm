@@ -25,7 +25,7 @@ class Login extends Dbh{
             exit();    
         }else if($checkPwd==true){
             session_start();
-            $_SESSION["user_email"]= $email;
+            $_SESSION["user_email"] = $email;
         }
         $stmt = null;
         }

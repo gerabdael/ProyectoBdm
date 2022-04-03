@@ -1,6 +1,8 @@
 <?php 
     session_start();
 include('./header.php')?>
+<link href="../scripts/css/LogRegs.css" rel="stylesheet"> 
+
         <div class="card fa fa-align-center border-primary mb-3" style="width: 50rem; margin-left:50rem; margin-top:25rem; padding:3rem;">
             
 
@@ -26,8 +28,8 @@ include('./header.php')?>
                         <label for="InputPassword" class="form-label" >Password</label>
                         <input type="password" name="password" class="form-control" id="password" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu password registrado" >
                     </div>
-                    <button type="submit" name="submit" id="submit" class="btn btn-primary">Login</button>
-                    <a href="./Register.php" class="btn btn-primary">Registrarse</a>
+                    <button type="submit" name="submit" id="submit" class="btn Custom_btn">Login</button>
+                    <a href="./Register.php" class="btn Custom_btn">Registrarse</a>
                 </form>
             </div>
         </div>
