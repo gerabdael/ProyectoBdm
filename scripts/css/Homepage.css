@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.homeqst{
-    margin: 10%;
-    padding: 10px;
-    box-sizing: content-box;
-    font-family: 'Lato', sans-serif;
-    position: absolute;
-    top: 250px;
+
+.MainPage{
+  margin: auto;
+  position: relative;
+  margin-top: 0%;
+  padding-bottom: 10%;
+  padding-top: 2px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
+
+
 
 .wrapper{
     margin: 20px 0;
@@ -73,17 +77,6 @@ padding:10px;
     background-size: auto;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #ffffff;
-
-    min-height: 50rem;
-    font-size: 14px;
-
-  }
   
   img{
      width: 100%;

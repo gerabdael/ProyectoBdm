@@ -1,13 +1,18 @@
 @import url('http://fonts.cdnfonts.com/css/terafik');
 
 
+
 .bodyextra{
   background: rgb(231,231,231);
   background: linear-gradient(180deg, rgba(231,231,231,1) 0%, rgb(187, 187, 187) 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+
 }
 
 .PresentationStuff{
- padding-left: 20px;
+  padding-left: 20px;
   font-size: 35px;
   font-family: 'Terafik', sans-serif;
 }
@@ -28,9 +33,10 @@
     background-color: none;
     width: 70%;
     border-radius: 75px;
-    padding-top: 1%;
-    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 15%;
     margin: auto;
+    position: relative;
     
 }
 
@@ -95,4 +101,76 @@
 
 
 
+  .allcontainer{
+    margin: auto;
+    position: relative;
+    margin-top: 20%;
+  }
+
+  
+
+  .LoginBox{
+
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    text-align: center;
+    position:relative;
+    padding-top: 5%;
+
+    
+}
+.LoginBox h1{
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Century Gothic";
+  font-size: 50px;
+}
+
+.LoginBox input{
+  text-align: center;
+  background: none;
+  border-bottom: 3px solid;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-color: #000000;
+  width: 100%;
+}
+
+
+.LoginBox button {
+  color: #fff;
+  background-color: #330000;
+  border-color: #b42424;
+  border-radius: 15px;
+  padding-left: 30px;
+  width: 100px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  text-align: justify;
+  
+}
+
+.LoginBox button:hover {
+  color: #fff;
+  background-color: #eb2651;
+  border-color: #c8ff00;
+}
+
+
+.LoginBox a {
+  color: rgb(0, 0, 0);
  
+  
+}
+
+.LoginBox a:hover {
+  color: #fff;
+}

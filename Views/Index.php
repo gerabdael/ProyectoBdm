@@ -1,6 +1,12 @@
-<?php include('./header.php')?>   
+<?php 
+    session_start();
+include('./HeaderFinal.php')?>
+
+
+
    <!-- noticias grid-->
-    <div  class="container" style="margin-top: 10rem;">
+    <div  class="MainPage" >
+
         <div class="row">
             <div id="carouselNews" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -40,6 +46,8 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
             </div>
+
+
             <h3>Recientes</h3>
             <div class="col">
                 <div class="card bg-dark text-white">
@@ -69,7 +77,14 @@
                     </div>
                 </div>
             </div>
+       
         </div>
-    </section>
+
+    </div>
+   
     <!-- noticias grid-->
+
+
+
+
     <?php include('./footer.php')?>

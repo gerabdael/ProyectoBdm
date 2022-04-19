@@ -1,0 +1,59 @@
+@import url('http://fonts.cdnfonts.com/css/salma-pro-medium-narrow');
+                
+
+footer {
+background-color: black;
+position: absolute;
+
+padding: 1rem 0 2rem 0;
+height: auto;
+width: 100vw;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+
+.Options a{
+color: white;
+font-family: 'Salma Pro', sans-serif;
+text-decoration: none;
+}
+
+.Options a:hover{
+    display: inline-block;
+    color: rgb(255, 131, 94);
+    transition: .8s;
+}
+
+.Options{
+    margin: auto;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-left: 50%;
+}
+
+
+
+
+
+.JoinUs{
+    margin: auto;
+    color: white;
+    margin-left: 15px;
+}
+.JoinUs a.buttonJoinUs{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    padding-left: 13px;
+    padding-top: 2px;
+    background:red;
+}
+
