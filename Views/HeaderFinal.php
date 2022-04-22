@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+<?php
+    session_start();
+?> 
 <head>
 
     <meta charset="UTF-8">
@@ -33,7 +35,20 @@
                 <button type="submit">Search</button>
 
                 <ul class=newslogin>
-                <a href="../Views/Login.php" >SIGN-UP</a>
+                <?php
+                        if(isset($_SESSION["user_email"])){
+                    ?>
+                        <?php echo $_SESSION["user_email"];?>
+                        <button type="button">Exit</button>
+                    <?php
+                        }
+                        else {
+                    ?> 
+                        <a href="../Views/Login.php" >SIGN-UP</a>
+                    <?php
+                        }
+                    ?>  
+                
                 </ul>
                 
             

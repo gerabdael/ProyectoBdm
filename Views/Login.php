@@ -1,5 +1,4 @@
 <?php 
-    session_start();
 include('./HeaderFinal.php')?>
 
 
@@ -11,18 +10,6 @@ include('./HeaderFinal.php')?>
             <div class="LoginBox">
             
                 <form class="form" action="../Model/login_inc.php" method="post"> <i class="fa fa-align-center" aria-hidden="true" id="loginForm"></i>
-                    <?php
-                        if(isset($_SESSION["user-email"])){
-                    ?>
-                        <h3 class="card-header"><?php echo $_SESSION["user_email"];?></h3> 
-                    <?php
-                        }
-                        else {
-                    ?> 
-                        <h3 class="card-header">Login</h3>
-                    <?php
-                        }
-                    ?>  
                     <h1>Login</h1><br><br><br>
                     <div class="mb-3 form-group">
                         <p>Correo Electronico</p>
