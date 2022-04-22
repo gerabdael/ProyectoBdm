@@ -26,7 +26,7 @@
 <div class="JoinUs">
 ¿Quieres Trabajar Con Nosotros? 
 
-<a href="Index.php" class="buttonJoinUs">Unete</a>
+<a href="Register.php" class="buttonJoinUs">Unete</a>
 
 </div>
 
