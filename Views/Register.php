@@ -1,5 +1,4 @@
 <?php 
-    session_start();
 include('./HeaderFinal.php')?>
         
     
@@ -51,11 +50,10 @@ include('./HeaderFinal.php')?>
                     <input type="text" class="form-control " name="telephone" id="InputTel"  placeholder="Ingresa tu telefono">
                     </ul>
                 </div>
-              
                 <hr>
                 <div>
                     <label for="userPhoto" class="form-label">Foto de Perfil:</label><br>
-                    <input type="file" name="userPhoto" id="userPhoto" >
+                    <input type="file" name="userPhoto" value="load" id="userPhoto">  
                 </div>
                 <hr>
                  <!--<div class="mb-3 form-check">
@@ -68,13 +66,12 @@ include('./HeaderFinal.php')?>
 
                     
                 <input type="submit" name="submit" id="registerbutton" value="Registrar" style= "border-radius: 15px;  color: #fff;
-    background-color: #eb2651;;
-    border-color: #b42424;  padding: 5px;
-    position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-    text-align: justify;">
-
+                background-color: #eb2651;;
+                border-color: #b42424;  padding: 5px;
+                position: relative;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+                text-decoration: none;
+                text-align: justify;">
                 <br>
 
             </form>

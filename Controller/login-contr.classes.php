@@ -1,5 +1,5 @@
 <?php
-include "../Controller/login.classes.php";
+include "../Classes/login.classes.php";
 
 class LoginContr extends Login{
     private $email;

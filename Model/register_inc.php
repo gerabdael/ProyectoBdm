@@ -8,8 +8,9 @@ include "../Controller/register-contr.classes.php";
         $confirmPassword = $_POST["confirmPassword"];
         $telephone = $_POST["telephone"];
         $birthdayDate = $_POST["birthdayDate"];
+        $userPhoto= $_POST["userPhoto"];
     }
-    $register = new RegisterContr($user,$completeName,$email,$password,$confirmPassword,$telephone);
+    $register = new RegisterContr($user,$completeName,$email,$password,$userPhoto,$confirmPassword,$telephone);
     $register -> registerUser();
     header("location: ../Views/Register.php?error=none");
 ?>

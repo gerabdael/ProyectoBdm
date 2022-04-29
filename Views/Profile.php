@@ -1,4 +1,6 @@
-<?php include('./header2.php')?>  
+<?php 
+    session_start();
+    include('./header2.php')?>  
 
 <script>
 $(document).ready(function(){
@@ -69,7 +71,7 @@ $("#VerNombre").val(localStorage.getItem("nombre"));
                                     <h5>Nombre Completo</h5>
                                 </div>
                                 <div class="col-md-9 ">
-                                <input type="text" id="VerNombre" style="color:red;" ></input><br>
+                                <input type="text" id="VerNombre" name="name" style="color:red;" ></input><br>
                                 </div>
                             </div>
                             <hr>

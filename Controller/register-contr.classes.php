@@ -1,5 +1,5 @@
 <?php
-include "../Controller/register.classes.php";
+include "../Classes/register.classes.php";
 class RegisterContr extends Register{
         private $user;
         private $completeName;
@@ -7,9 +7,9 @@ class RegisterContr extends Register{
         private $password ;
         private $confirmPassword;
         private $telephone;
-        private $birthdayDate;
+        private $userPhoto;
 
-        public function __construct($user,$completeName,$email,$password,$confirmPassword,$telephone)
+        public function __construct($user,$completeName,$email,$password,$userPhoto,$confirmPassword,$telephone)
         {
             $this->user=$user;
             $this->completeName=$completeName;
@@ -17,6 +17,7 @@ class RegisterContr extends Register{
             $this->password=$password;
             $this->confirmPassword=$confirmPassword;
             $this->telephone=$telephone;
+            $this->userPhoto=$userPhoto;
         }
 
         public function registerUser(){
@@ -24,10 +25,10 @@ class RegisterContr extends Register{
                 header("location: ../Views/Register.php?error=emptyInput");
                 exit();
             }
-            if($this->chkpswrd()==false){
+/*             if($this->chkpswrd($this->password)==false){
                 header("location: ../Views/Register.php?error=invalidPwd");
                 exit();
-            }
+            } */
             if($this->matchPwd()==false){
                 header("location: ../Views/Register.php?error=matchPwd");
                 exit();
@@ -37,7 +38,7 @@ class RegisterContr extends Register{
                 exit();
             } 
             
-            $this->register($this->completeName,$this->email,$this->password,$this->user,$this->telephone);
+            $this->register($this->completeName,$this->email,$this->password,$this->userPhoto,$this->user,$this->telephone);
         }
         private function matchPwd(){
             $result;
@@ -49,17 +50,6 @@ class RegisterContr extends Register{
             return $result;
         }
 
-        private function chkpswrd(){
-            $result;
-            $regx="^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
-            $match = preg_match($regx,$this->password);
-            if($match==0){
-                $result=false;
-            }else{
-                $result=true;
-            }
-            return $result;
-        }
 
         private function empyInputs(){
             $result;
