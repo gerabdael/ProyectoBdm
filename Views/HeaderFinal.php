@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <?php
-    session_start();
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
+    
 ?> 
 <head>
 
@@ -14,12 +19,17 @@
     <link href="../scripts/css/NavBar.css" rel="stylesheet">
     <link href="../scripts/css/FooterStyles.css" rel="stylesheet">
     <link href="../scripts/css/Homepage.css" rel="stylesheet">
-
+    <link href="../scripts/css/NewsFormat.css" rel="stylesheet">
 </head>
 
 
+    <body class="bodyextra">
+
+
+    
 <nav class="NewsNavBar">
                 
+                <div class="optionsNav">
                 <li>
                 <a href="Index.php">HOME
                 </a>
@@ -31,15 +41,22 @@
                 <a href="AddNews.php">ADD NEWS</a>
                 </li>
 
-                <input type="text" placeholder="Search">
+                </div>
+
+                <div class="searchNav">
+                <input type="text" placeholder="Teclea Aquí">
                 <button type="submit">Search</button>
 
-                <ul class=newslogin>
+                </div>
+
+
+                <div class="LoginStatus">
+                <ul>
                 <?php
                         if(isset($_SESSION["user_email"])){
                     ?>
                         <?php echo $_SESSION["user_email"];?>
-                        <button type="button">Exit</button>
+                        <button type="button">Salir</button>
                     <?php
                         }
                         else {
@@ -50,9 +67,9 @@
                     ?>  
                 
                 </ul>
+
+                </div>
                 
             
        
     </nav>
-
-    <body class="bodyextra">
