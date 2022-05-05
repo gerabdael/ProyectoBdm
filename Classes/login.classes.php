@@ -24,8 +24,17 @@ class Login extends Dbh{
 
             exit();    
         }else if($checkPwd==true){
+            $user = $this->connect()->prepare('SELECT ID_user,nombreCompleto,alias,FotoUser,telefono FROM usuario where email=?;');
+            $user->execute(array($email));
+            $userInfo = $user->fetchAll((PDO::FETCH_ASSOC));
             session_start();
+            $_SESSION["user_ID"] = $userInfo[0]["ID_user"]; 
+            $_SESSION["user_name"] = $userInfo[0]["nombreCompleto"];
+            $_SESSION["user_nickname"] = $userInfo[0]["alias"];
+            $_SESSION["user_phone"] = $userInfo[0]["telefono"];
+            $_SESSION["user_photo"] = $userInfo[0]["FotoUser"];
             $_SESSION["user_email"] = $email;
+            $_SESSION["user_password"] = $password;
         }
         $stmt = null;
         }

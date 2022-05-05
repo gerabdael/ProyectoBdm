@@ -9,7 +9,7 @@ include('./HeaderFinal.php')?>
         
         <h3 class="PresentationStuff">Registrarse</h3><br><br>
       
-            <form action="../Model/register_inc.php" method="post"> 
+            <form action="../Model/register_inc.php" method="post" enctype="multipart/form-data"> 
                 <i class="fa fa-align-center" aria-hidden="true" name="form"></i>
                  <div>
                     <label for="InputUser" class="form-label">Usuario</label>
@@ -53,13 +53,9 @@ include('./HeaderFinal.php')?>
                 <hr>
                 <div>
                     <label for="userPhoto" class="form-label">Foto de Perfil:</label><br>
-                    <input type="file" name="userPhoto" value="load" id="userPhoto">  
+                    <input type="file" name="rPhoto" placeholder="ingrese foto">  
                 </div>
                 <hr>
-                 <!--<div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="Check1">
-                    <label class="form-check-label" for="Check1">Check me out</label>
-                </div> -->
                 <a  href="Login.php"> Regresar
                             <span class="visually-hidden">(current)</span>
                         </a>

@@ -6,5 +6,5 @@ include "../Controller/login-contr.classes.php";
     }
     $login = new LoginContr($email,$password);
     $login -> loginUser();
-    header("location: ../Views/Login.php?error=none");
+    header("location: ../Views/Profile.php?error=none");
 ?>
