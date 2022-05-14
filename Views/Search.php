@@ -1,4 +1,4 @@
-<?php include('./header.php')?>
+<?php include('./header2.php')?>
     <!-- noticias grid-->
     <div  class="container" style="margin-top: 10rem;">
         <div class="row">
