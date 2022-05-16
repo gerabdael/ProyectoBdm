@@ -1,8 +1,13 @@
-<?php include('./HeaderFinal.php')?>
+<?php 
+include('./HeaderFinal.php');
+include('../Model/news_inc.php');
+?>
  
 <div class="container" style="margin-top: 1rem;"> 
-
-<div class="bs-docs-section" id="myGroup" style="padding: 5rem; padding-bottom: 10%;">
+<?php
+$fillnews-> newscall();
+?>
+<!-- <div class="bs-docs-section" id="myGroup" style="padding: 5rem; padding-bottom: 10%;">
 <div class="row">
     <div class="col-lg-12">
     <div class="bs-component">
@@ -54,7 +59,7 @@
 </div>
 
 </div>
-</div>
+</div> -->
 
 </div>
 </div>

@@ -61,7 +61,5 @@ class RegisterContr extends Register{
             }
             return $result;
         }
-
-
     }  
 ?>

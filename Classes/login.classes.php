@@ -20,11 +20,11 @@ class Login extends Dbh{
             $stmt = null;
             header("location: ../Views/Login.php?error=incorrectPassword");
 
-          
+           
 
             exit();    
         }else if($checkPwd==true){
-            $user = $this->connect()->prepare('SELECT ID_user,nombreCompleto,alias,FotoUser,telefono FROM usuario where email=?;');
+            $user = $this->connect()->prepare('SELECT ID_user,nombreCompleto,alias,FotoUser,telefono,tipoU FROM usuario where email=?;');
             $user->execute(array($email));
             $userInfo = $user->fetchAll((PDO::FETCH_ASSOC));
             session_start();
@@ -33,6 +33,8 @@ class Login extends Dbh{
             $_SESSION["user_nickname"] = $userInfo[0]["alias"];
             $_SESSION["user_phone"] = $userInfo[0]["telefono"];
             $_SESSION["user_photo"] = $userInfo[0]["FotoUser"];
+            $_SESSION["user_type"]=$userInfo[0]["tipoU"];
+            $_SESSION["user_status"]=$userInfo[0]["StatusU"];
             $_SESSION["user_email"] = $email;
             $_SESSION["user_password"] = $password;
         }

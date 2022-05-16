@@ -8,3 +8,4 @@ include "../Controller/login-contr.classes.php";
     $login -> loginUser();
     header("location: ../Views/Profile.php?error=none");
 ?>
+ 

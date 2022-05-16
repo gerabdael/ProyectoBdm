@@ -54,7 +54,7 @@ class newFill extends Dbh{
     <?php
     }
     public function newsfillRecent(){
-        $news = $this->connect()->prepare('SELECT titulo,descripcion,Image FROM noticias where new_status="Publicada" order by id_noticia desc;');
+        $news = $this->connect()->prepare('SELECT id_noticia,titulo,descripcion,Image FROM noticias where new_status="Publicada" order by id_noticia desc;');
         $news->execute(array());
         $newsInfo = $news->fetchAll((PDO::FETCH_ASSOC));
         $newsCount = $news-> rowCount();
@@ -82,11 +82,21 @@ class newFill extends Dbh{
             <div class="card bg-dark text-black">
                 <img class="card-img w-20" src="<?php echo $newsInfo[2]["Image"];?>" alt="hi">
                 <div class="card-img-overlay">
-                    <h5><?php echo $newsInfo[2]["titulo"];?></h5>
-                    <p><?php echo $newsInfo[2]["descripcion"];?></p>
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[2]["titulo"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                       
+                        <?php
+                        $verificador = $newsInfo[2]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" value='<?php echo $newsInfo[2]["id_noticia"];?>'>
+                    </form>
+                </a>   
+                <a href="#" onclick="document.news.submit()"><?php echo $newsInfo[2]["descripcion"];?></a>   
                 </div>
             </div>
         </div>
+
+
         <?php
         }
 }

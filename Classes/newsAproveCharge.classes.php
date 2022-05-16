@@ -7,7 +7,7 @@ class newAprovefill extends Dbh{
         
     }
     public function newsAprovefill(){
-        $news = $this->connect()->prepare('SELECT ID_Noticia,titulo,descripcion FROM noticias where new_status="En revision" order by id_noticia desc;');
+        $news = $this->connect()->prepare('SELECT ID_Noticia,titulo,descripcion FROM noticias where new_status="Terminada" order by id_noticia desc;');
         $news->execute(array());
         $newsInfo = $news->fetchAll((PDO::FETCH_ASSOC));
         $newsCount = $news-> rowCount();

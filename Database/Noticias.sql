@@ -40,6 +40,7 @@ insert into NOTICIAS_STATUS VALUES("En redaccion",sysdate(),117,1);
 insert into NOTICIAS_STATUS VALUES("Terminada",sysdate(),117,1);
 insert into NOTICIAS_STATUS VALUES("Publicada",sysdate(),117,1);
 
+
 select * from NOTICIAS_STATUS;
 
 CREATE TABLE IF NOT EXISTS NOTICIA_MEDIA(
@@ -50,7 +51,7 @@ VIDEO_MEDIA LONGBLOB NOT NULL comment "Contenido del video"
 CREATE TABLE IF NOT exists NOTICIAS(
 ID_Noticia INT NOT NULL AUTO_INCREMENT PRIMARY KEY comment "llave primaria e Id de la noticia",
 titulo VARCHAR(100) NOT NULL comment "Titulo de la noticia",
-texto VARCHAR(100) NOT NULL comment "Contenido textual de la noticia" ,
+texto longtext NOT NULL comment "Contenido textual de la noticia" ,
 Firma Varchar(50) not null comment "firma del reportero",
 ciudad VARCHAR(100) NOT NULL comment "Ciudad donde ocurrio la noticia",
 suburbio VARCHAR(100) NOT NULL comment "Suburbio o Barrio donde ocurrio la noticia" ,
@@ -73,7 +74,7 @@ Foreign key(categoaux) references CATEGORIAS(ID_Catego)
 
 );
 
-
+alter table noticiero_web.noticias ADD descripcion longtext AFTER TITULO;
 
 
 

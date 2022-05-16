@@ -20,7 +20,7 @@ class AddNews extends Dbh{
     }
 
     protected function insertNews($title,$descripcion,$noticia,$firma,$city,$sub,$country,$fpub,$fileToUpload, $Category,$userReporter ){
-        $stmt = $this->connect()->prepare('INSERT INTO noticias(titulo,descripcion,texto,Firma,ciudad,suburbio,country,DiaNoticia,Diaeventos,activo,Image,iduser,new_status,categoaux)VALUES(?,?,?,?,?,?,?,sysdate(),?,1,?,?,"En redaccion",?);');
+        $stmt = $this->connect()->prepare('INSERT INTO noticias(titulo,descripcion,texto,Firma,ciudad,suburbio,country,DiaNoticia,Diaeventos,activo,Image,iduser,new_status,categoaux)VALUES(?,?,?,?,?,?,?,sysdate(),?,1,?,?,"Terminada",?);');
         if (!$stmt-> execute(array($title,$descripcion,$noticia,$firma,$city,$sub,$country,$fpub,$fileToUpload , $Category,$userReporter))) {
             $stmt = null;
             header("location: ../Views/AddNews.php?error=stmtfailed");

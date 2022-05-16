@@ -1,4 +1,12 @@
-<?php include('./HeaderFinal.php')?>
+<?php 
+
+
+
+include('./HeaderFinal.php');
+require( '../Classes/categories.classes.php');
+
+
+?>
 
 
 <div class="NewStuff">
@@ -9,25 +17,45 @@
 
         <h3>Crear Noticia</h3>
 
-            <form> <i class="fa fa-align-center" aria-hidden="true"></i>
+            <form action="../Model/addnews_inc.php" method="post" enctype="multipart/form-data" > <i class="fa fa-align-center" aria-hidden="true"></i>
 
                  <div class="mb-3">
                     <label for="InputUser" >Titulo </label>
-                    <input type="text" class="form-control nameInput" id="Inputtitle" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                    <input type="text" class="form-control nameInput" name= "title"id="Inputtitle" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
                 </div>
-
+                <div class="mb-3">
+                    <label for="category" >Categoria</label>
+                    <?php
+                        $func = new Category();
+                        $func->  fill_cat();
+                        ?>
+                </div>
                 <div class="mb-3">
                     <label for="InputEmail" >Descripcion</label>
-                    <textarea class="form-control" id="DescriptionTextarea" rows="3" style="height: 53px;"></textarea>
+                    <textarea class="form-control" id="DescriptionTextarea" name="descripcion" rows="3" style="height: 53px;"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="InputEmail" >Noticia</label>
-                    <textarea class="form-control" id="newsTextarea" rows="3" style="height: 53px;"></textarea>
+                    <textarea class="form-control" id="newsTextarea" name="noticia" rows="3" style="height: 53px;"></textarea>
                 </div>
-
+                <div class="mb-3">
+                    <label for="InputUser" >Firma</label>
+                    <input type="text" class="form-control nameInput" name= "firma"id="firma" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="InputUser" >Ciudad</label>
+                    <input type="text" class="form-control nameInput" name= "city"id="city" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="InputUser" >Suburbio</label>
+                    <input type="text" class="form-control nameInput" name= "sub"id="sub" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="InputUser" >País</label>
+                    <input type="text" class="form-control nameInput" name= "country"id="country" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                </div>
                 <label for="date">Fecha de publicacion:</label><div></div>
-                <input type="date" id="start" name="fnac" id="newsDate" min="1960-01-01" max="2020-12-31" required autofocus>
-
+                <input type="date" id="start" name="fpub" id="newsDate" name="fecha" min="1960-01-01" max="2020-12-31" required autofocus>
                 <hr>
                  <div class="mb-3">
                     <label for="InputEmail" >Foto Noticia:</label><br>
@@ -39,7 +67,7 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
 
-                <a type="submit" class="btn btn-primary" id="publishNew">Publicar</a>
+                <input type="submit" name="submit" class="btn btn-primary" id="publishNew" value="Publicar">
 
             </form>
         </div>

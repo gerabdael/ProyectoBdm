@@ -1,4 +1,5 @@
-<?php include('./HeaderFinal.php')?>
+<?php include('./HeaderFinal.php');
+  require( '../Classes/newsAproveCharge.classes.php');?>
 
 
 <div class="NewStuff">
@@ -17,49 +18,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Perro policia</td>
-      <td>Un perro que se hizo policia</td>
-      <td>
-      <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
-      </td>
+    <?php
+    
+        $fillnewsAproved= new newAprovefill();
+        $fillnewsAproved-> newsAprovefill();
+      ?>
 
-      <td>
-      <button type="button" class="btn btn-success">Aprovada</button>
-      <button type="button" class="btn btn-danger">Negada</button>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">2</th>
-      <td>Perro bombero</td>
-      <td>Un perro que se hizo bombero</td>
-      <td>
-      <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
-      </td>
-
-      <td>
-      <button type="button" class="btn btn-success">Aprovada</button>
-      <button type="button" class="btn btn-danger">Negada</button>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">3</th>
-      <td>Perro astronauta</td>
-      <td>Un perro que se hizo astronauta</td>
-      <td>
-      <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
-      </td>
-
-      <td>
-      <button type="button" class="btn btn-success">Aprovada</button>
-      <button type="button" class="btn btn-danger">Negada</button>
-      </td>
-    </tr>
-
-  
   </tbody>
 </table>
        
