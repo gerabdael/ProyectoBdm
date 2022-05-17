@@ -1,0 +1,44 @@
+<?php
+include "../Classes/AprovedNews.classes.php";
+
+class AprovednewsContr extends Aprovednews{
+    private $idhiddenid ;
+    private $idhiddentitle;
+    private $idhiddendesc ;
+
+    public function __construct($idhiddendesc,$idhiddentitle,$idhiddenid)
+    {
+        $this->idhiddenid = $idhiddenid;
+        $this->idhiddentitle = $idhiddentitle;
+        $this->idhiddendesc = $idhiddendesc;
+        $this->commentarioAdmin = $commentarioAdmin;
+    }
+
+    public function aproved(){
+        if($this->empyInputs() == false){
+            header("location: ../Views/Login.php?error=emptyInput");
+            exit();
+        }
+        $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc);
+    }
+
+    public function denied(){
+        if($this->empyInputs() == false){
+            header("location: ../Views/Login.php?error=emptyInput");
+            exit();
+        }
+       $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc);
+    }
+
+    
+    private function empyInputs(){
+        $result;
+        if(empty($this->email)||empty($this->pwd)){
+            $result = false;
+        }else{
+            $result=true;
+        }
+        return $result;
+    }
+}
+?>
