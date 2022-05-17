@@ -83,30 +83,31 @@
 
 
                 <div class="LoginStatus">
-                <ul>
+               
                 <?php
                         if(isset($_SESSION["user_email"])){
                     ?>
-                        <?php echo $_SESSION["user_email"];?>
+                    
+                        
                         <form action="../Classes/endSession.classes.php" method="post">
-                        <input class="nav-item" type="submit" name="submit" value="Salir"style= "border-radius: 15px;  color: #fff;
-                        background-color: #eb2651;
-                        border-color: #b42424;  padding: 5px;
-                        position: relative;
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-                        text-decoration: none;
-                        text-align: justify;">
+                            <ul>
+                        <?php echo $_SESSION["user_email"];?>
+                        </ul>
+                        <input class="nav-item" type="submit" name="submit" value="Salir">
+                      
                         </form>
                     <?php
                         }
                         else {
                     ?> 
+                    <ul>
                         <a href="../Views/Login.php" >SIGN-UP</a>
+                        </ul>
                     <?php
                         }
                     ?>  
                 
-                </ul>
+               
 
                 </div>
        

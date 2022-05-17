@@ -5,8 +5,9 @@ class AprovednewsContr extends Aprovednews{
     private $idhiddenid ;
     private $idhiddentitle;
     private $idhiddendesc ;
+    private $commentarioAdmin;
 
-    public function __construct($idhiddendesc,$idhiddentitle,$idhiddenid)
+    public function __construct($idhiddendesc,$idhiddentitle,$idhiddenid,$commentarioAdmin)
     {
         $this->idhiddenid = $idhiddenid;
         $this->idhiddentitle = $idhiddentitle;
@@ -16,18 +17,18 @@ class AprovednewsContr extends Aprovednews{
 
     public function aproved(){
         if($this->empyInputs() == false){
-            header("location: ../Views/Login.php?error=emptyInput");
+            header("location: ../Views/AproveNews.php?error=emptyInput");
             exit();
         }
-        $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc);
+        $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
     }
 
     public function denied(){
         if($this->empyInputs() == false){
-            header("location: ../Views/Login.php?error=emptyInput");
+            header("location: ../Views/AproveNews.php?error=emptyInput");
             exit();
         }
-       $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc);
+       $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
     }
 
     

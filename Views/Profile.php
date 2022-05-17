@@ -57,7 +57,7 @@ $("#VerNombre").val(localStorage.getItem("nombre"));
                                 <hr>
                                 <a  class="btn btn-outline-info btn-lg" type="button" href="VerMisPreguntas.html">Ver tus noticias</a>
                                 <hr>  
-                                <a  class="btn btn-outline-info btn-lg" type="button" href="VerMisPreguntas.html">Noticias no publicadas</a>
+                                <a  class="btn btn-outline-info btn-lg" type="button" href="AproveNewsUser.php">Noticias no publicadas</a>
                                 <hr>  
                                 <a  class="btn btn-outline-info btn-lg" type="button" href="VerLikes.php">Ver Favoritos
                                 <span class="visually-hidden">(current)</span>

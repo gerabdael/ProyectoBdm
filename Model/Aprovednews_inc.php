@@ -6,6 +6,7 @@ include "../Controller/Aprovednews-contr.classes.php";
         $idhiddentitle = $_POST["idhiddentitle"];
         $idhiddendesc = $_POST["idhiddendesc"];
         $commentarioAdmin= $_POST["commentarioAdmin"];
+        
         $aprove = new AprovednewsContr($idhiddenid,
         $idhiddentitle ,
         $idhiddendesc ,
@@ -16,6 +17,8 @@ include "../Controller/Aprovednews-contr.classes.php";
         $idhiddenid = $_POST["idhiddenid"];
         $idhiddentitle = $_POST["idhiddentitle"];
         $idhiddendesc = $_POST["idhiddendesc"];
+        $commentarioAdmin= $_POST["commentarioAdmin"];
+        
         $remove = new AprovednewsContr($idhiddenid,
         $idhiddentitle ,
         $idhiddendesc ,
