@@ -100,7 +100,7 @@
                         }
                         else {
                     ?> 
-                    <ul>
+                    <ul class=newslogin>
                         <a href="../Views/Login.php" >SIGN-UP</a>
                         </ul>
                     <?php

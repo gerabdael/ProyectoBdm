@@ -1,22 +1,82 @@
+@import url('http://fonts.cdnfonts.com/css/seriffic');
 
-@import url('http://fonts.cdnfonts.com/css/anonymous-pro');
 
 
 .NewsNavBar{
-  background-color: red;
-  height: 5vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+    background-color: #330000;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   
 
+
+  .NewsNavBar a{
+color: aliceblue;
+text-decoration: none;
+  }
+
+  .NewsNavBar button{
+    left: 61%;
+    height: 70%;
+    top: 5px;
+    border-radius: 15px;
+      position: relative;
+  }
+  .NewsNavBar input{
+   left: 61%;
+   height: 70%;
+   top: 5px;
+   border-radius: 15px;
+    position: relative;
+}
+
+ 
+  
+  .NewsNavBar li{
+    padding-left: 20px;
+    padding-top: 9px;
+    display: inline-block;
+    color: rgb(255, 219, 219);
+    font-size: 15px;
+    font-family: 'Seriffic', sans-serif;
+    position: relative;
+    text-decoration: none;
+    
+  }
+
+  .NewsNavBar ul{
+    margin-left: 0ch;
+    left: 60%;
+    padding-top: 9px;
+    display: inline-block;
+    color: rgb(255, 219, 219);
+    font-size: 15px;
+    font-family: 'Seriffic', sans-serif;
+    position: relative;
+    text-decoration: none;
+    
+  }
+  
+  .NewsNavBar li :hover{
+    display: inline-block;
+    color: rgb(255, 131, 94);
+    transition: .8s;
+  }
+
+  .NewsNavBar ul :hover{
+    display: inline-block;
+    color: rgb(255, 131, 94);
+    transition: .8s;
+  }
+
+/*si quitas esta parte se alinea todo pero se centra*/
 .optionsNav{
-  display: flex;
   float: left;
   height: 100%;
-  width: 90%;
+
   margin-top: 0%;
   padding-top: 6px;
 }
@@ -24,23 +84,19 @@
 .optionsNav li{
   list-style-type: none;
   padding-left: 25px;
-
-
 }
 .optionsNav a{
   text-decoration: none;
   font-size: 15px;
   color: white;
-  font-family: 'Anonymous Pro', sans-serif;
 }
 .optionsNav a:hover{
-  display: inline-block;
   color: rgb(255, 131, 94);
   transition: .8s;
 }
 
 
-
+/*si quitas esta parte se alinea todo pero se centra*/
 .searchNav{
   height: 100%;
   width: 30%;
@@ -65,7 +121,6 @@
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Anonymous Pro', sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
@@ -87,62 +142,53 @@
     transition: .8s;
   }
 
-
-
-.LoginStatus{
-  margin-right: 0;
-  height: 100%;
-  width: 25%;
-  margin-top: 0%;
-  padding-top: 5px;
-  display: inline-block;
-
-
-}
-
-.LoginStatus ul{
-  color:white;
-text-align: left;
-padding-right: 15px;
-}
-
-.LoginStatus a{
-  color:white;
-text-align: left;
-padding-right: 15px;
-}
-
-
-.LoginStatus input{
-
-  background-color: rgb(44, 44, 44);
-  border-radius: 55px;
-  border-style: none;
-  color: rgb(236, 236, 236);
-  cursor: pointer;
-  font-family: 'Anonymous Pro', sans-serif;
-  font-size: 15px;
-  text-align: center;
-  height: 25px;
- 
+  .LoginStatus{
+    margin-right: 0;
+    height: 100%;
+    width: 20%;
+    margin-top: 0%;
+    padding-top: 5px;
   
-}
-
-.LoginStatus form, .form-fields {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-
-
-.bodyextra{
-  background: rgb(231,231,231);
-  background: linear-gradient(180deg, rgba(231,231,231,1) 0%, rgb(187, 187, 187) 100%);
-  position: relative;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-
-}
+  }
+  
+  .LoginStatus ul{
+    color:white;
+  }
+  
+  
+  .LoginStatus button{
+  
+    background-color: rgb(255, 0, 0);
+    border-radius: 55px;
+    border-style: none;
+    color: rgb(236, 236, 236);
+    cursor: pointer;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    
+    display: inline-block;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  .bodyextra{
+    background: rgb(231,231,231);
+    background: linear-gradient(180deg, rgba(231,231,231,1) 0%, rgb(187, 187, 187) 100%);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  
+  }
