@@ -20,7 +20,7 @@ class Register extends Dbh{
     }
     protected function chkpswrd($password){
         $result;
-        $regx="/^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
+        $regx="/^\S*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%?&#!_-])[a-zA-Z0-9@$!%*?&#!_-]{8,}$/";
         $match = preg_match($regx,$password);
         if($match==0){
             $result=false;
