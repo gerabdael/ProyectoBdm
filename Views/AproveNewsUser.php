@@ -7,7 +7,7 @@
 <div class="NuevaNoticia">
 
 
-<P>NOTICIAS SIN  APROBAR</P>
+<h3>NOTICIAS SIN  APROBAR</h3>
 
 
 <table class="table table-striped table-dark">
@@ -22,9 +22,9 @@
   </thead>
   <tbody>
     <?php
-    
+        $iduser=$_SESSION["user_ID"];
         $fillnewsAproved= new newAprovefill();
-        $fillnewsAproved-> newsAprovefill();
+        $fillnewsAproved-> newsAprovefill($iduser);
       ?>
 
   </tbody>

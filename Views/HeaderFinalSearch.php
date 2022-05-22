@@ -55,6 +55,7 @@
                         if(isset($_SESSION["user_email"])){
                     ?>
                         <?php echo $_SESSION["user_email"];?>
+                        <ul>
                         <form action="../Classes/endSession.classes.php" method="post">
                         <input class="nav-item" type="submit" name="submit" value="Salir"style= "border-radius: 15px;  color: #fff;
                         background-color: #eb2651;;
@@ -64,6 +65,7 @@
                         text-decoration: none;
                         text-align: justify;">
                         </form>
+                        </ul>
                     <?php
                         }
                         else {

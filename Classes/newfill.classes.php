@@ -64,8 +64,22 @@ class newFill extends Dbh{
             <div class="card bg-dark text-black">
                 <img class="card-img w-20" src="<?php echo $newsInfo[0]["Image"];?>" alt="hi">
                 <div class="card-img-overlay">
-                    <h5><?php echo $newsInfo[0]["titulo"];?></h5>
-                    <p><?php echo $newsInfo[0]["descripcion"];?></p>
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[0]["titulo"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                        <?php
+                        $verificador = $newsInfo[0]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[0]["id_noticia"];?>'>
+                    </form>
+                </a>   
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[0]["descripcion"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                        <?php
+                        $verificador = $newsInfo[0]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[0]["id_noticia"];?>'>
+                    </form>
+                </a>   
                 </div>
             </div>
         </div>
@@ -73,8 +87,22 @@ class newFill extends Dbh{
             <div class="card bg-dark text-black">
                 <img class="card-img w-20" src="<?php echo $newsInfo[1]["Image"];?>" alt="hi">
                 <div class="card-img-overlay">
-                    <h5><?php echo $newsInfo[1]["titulo"];?></h5>
-                    <p><?php echo $newsInfo[1]["descripcion"];?></p>
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[1]["titulo"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                        <?php
+                        $verificador = $newsInfo[1]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[1]["id_noticia"];?>'>
+                    </form>
+                </a>   
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[1]["descripcion"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                        <?php
+                        $verificador = $newsInfo[1]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[1]["id_noticia"];?>'>
+                    </form>
+                </a>   
                 </div>
             </div>
         </div>
@@ -84,14 +112,20 @@ class newFill extends Dbh{
                 <div class="card-img-overlay">
                 <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[2]["titulo"];?>
                     <form action="../Model/news_inc.php" method="POST" id="form-id">
-                       
                         <?php
                         $verificador = $newsInfo[2]["id_noticia"];
                         ?> 
-                        <input type="text" name="idnoticia" value='<?php echo $newsInfo[2]["id_noticia"];?>'>
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[2]["id_noticia"];?>'>
                     </form>
                 </a>   
-                <a href="#" onclick="document.news.submit()"><?php echo $newsInfo[2]["descripcion"];?></a>   
+                <a href="#" onclick="document.getElementById('form-id').submit()"><?php echo $newsInfo[2]["descripcion"];?>
+                    <form action="../Model/news_inc.php" method="POST" id="form-id">
+                        <?php
+                        $verificador = $newsInfo[2]["id_noticia"];
+                        ?> 
+                        <input type="text" name="idnoticia" hidden value='<?php echo $newsInfo[2]["id_noticia"];?>'>
+                    </form>
+                </a>   
                 </div>
             </div>
         </div>

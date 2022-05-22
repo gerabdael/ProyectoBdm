@@ -1,5 +1,7 @@
-<?php include('./HeaderFinal.php');
-  require( '../Classes/newsAproveCharge.classes.php');?>
+<?php 
+include('./HeaderFinal.php');
+require( '../Classes/newsAproveCharge.classes.php');
+?>
 
 
 <div class="NewStuff">
@@ -21,7 +23,7 @@
     <?php
     
         $fillnewsAproved= new newAprovefill();
-        $fillnewsAproved-> newsAprovefill();
+        $fillnewsAproved-> newsAprovefill( $_SESSION["user_ID"]);
       ?>
 
   </tbody>

@@ -33,7 +33,7 @@ class AddNewsContr extends AddNews{
         if($this->empyInputs() == false){
             header("location: ../Views/AddNews.php?error=emptyInput");
             exit();
-        }
+        }else{
         $this -> insertNews($this->title,
         $this->descripcion,
         $this->noticia,
@@ -44,7 +44,28 @@ class AddNewsContr extends AddNews{
         $this->fpub ,
         $this->fileToUpload,
         $this->userReporter,
-         $this->Category,);
+         $this->Category,);            
+        }
+
+    }
+    public function updatedNews(){
+        if($this->empyInputs() == false){
+            header("location: ../Views/AddNews.php?error=emptyInput");
+            exit();
+        }else{
+        $this -> updateNews($this->title,
+        $this->descripcion,
+        $this->noticia,
+        $this->firma,
+        $this->city,
+        $this->sub ,
+        $this->country ,
+        $this->fpub ,
+        $this->fileToUpload,
+        $this->userReporter,
+         $this->Category,);            
+        }
+
     }
 
     

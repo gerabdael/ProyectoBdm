@@ -14,8 +14,9 @@ class LoginContr extends Login{
         if($this->empyInputs() == false){
             header("location: ../Views/Login.php?error=emptyInput");
             exit();
+        }else{
+            $this -> sign_in($this->email,$this->pwd);
         }
-        $this -> sign_in($this->email,$this->pwd);
     }
 
     

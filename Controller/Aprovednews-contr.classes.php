@@ -7,7 +7,7 @@ class AprovednewsContr extends Aprovednews{
     private $idhiddendesc ;
     private $commentarioAdmin;
 
-    public function __construct($idhiddendesc,$idhiddentitle,$idhiddenid,$commentarioAdmin)
+    public function __construct($idhiddenid,$idhiddendesc,$idhiddentitle,$commentarioAdmin)
     {
         $this->idhiddenid = $idhiddenid;
         $this->idhiddentitle = $idhiddentitle;
@@ -19,27 +19,48 @@ class AprovednewsContr extends Aprovednews{
         if($this->empyInputs() == false){
             header("location: ../Views/AproveNews.php?error=emptyInput");
             exit();
+        }else{
+            $this -> aprove($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);    
         }
-        $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
+
     }
 
     public function denied(){
         if($this->empyInputs() == false){
             header("location: ../Views/AproveNews.php?error=emptyInput");
             exit();
+        }else{
+             $this -> denie($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
         }
-       $this -> sign_in($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
+      
     }
-
-    
+    public function modified(){
+        if($this->empyInputs() == false){
+            header("location: ../Views/AproveNews.php?error=emptyInput");
+            exit();
+        }else{
+             $this -> modifie($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
+        }
+      
+    }
+    public function deleted(){
+        if($this->empyInputs() == false){
+            header("location: ../Views/AproveNews.php?error=emptyInput");
+            exit();
+        }else{
+             $this -> delete($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
+        }
+      
+    }
     private function empyInputs(){
         $result;
-        if(empty($this->email)||empty($this->pwd)){
+        if(empty($this->idhiddenid)||empty($this->idhiddentitle)||empty($this->idhiddendesc)||empty($this->commentarioAdmin)){
             $result = false;
         }else{
             $result=true;
         }
         return $result;
     }
+    
 }
 ?>

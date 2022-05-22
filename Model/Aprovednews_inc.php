@@ -11,7 +11,7 @@ include "../Controller/Aprovednews-contr.classes.php";
         $idhiddentitle ,
         $idhiddendesc ,
         $commentarioAdmin);
-        $aprove-> aprove();
+        $aprove-> aproved();
 
     }else if(isset($_POST["submit_Denied"])){
         $idhiddenid = $_POST["idhiddenid"];
@@ -25,7 +25,30 @@ include "../Controller/Aprovednews-contr.classes.php";
         $commentarioAdmin);
         $remove-> denied();
 
+    }else if(isset($_POST["submit_Modificar"])){
+        $idhiddenid = $_POST["idhiddenid"];
+        $idhiddentitle = $_POST["idhiddentitle"];
+        $idhiddendesc = $_POST["idhiddendesc"];
+        $commentarioAdmin= $_POST["commentarioAdmin"];
+        
+        $remove = new AprovednewsContr($idhiddenid,
+        $idhiddentitle ,
+        $idhiddendesc ,
+        $commentarioAdmin);
+        $remove-> modified();
+
+    }else if(isset($_POST["submit_Eliminar"])){
+        $idhiddenid = $_POST["idhiddenid"];
+        $idhiddentitle = $_POST["idhiddentitle"];
+        $idhiddendesc = $_POST["idhiddendesc"];
+        $commentarioAdmin= $_POST["commentarioAdmin"];
+        
+        $remove = new AprovednewsContr($idhiddenid,
+        $idhiddentitle ,
+        $idhiddendesc ,
+        $commentarioAdmin);
+        $remove-> deleted();
+
     }
-    $login -> loginUser();
-    header("location: ../Views/Profile.php?error=none");
+
 ?>

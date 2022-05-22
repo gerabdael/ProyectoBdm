@@ -1,5 +1,6 @@
 <?php
 include "../Controller/register-contr.classes.php";
+ 
     if(isset($_POST["submit"])){
         $user = $_POST["user"];
         $completeName = $_POST["completeName"];
@@ -23,8 +24,8 @@ include "../Controller/register-contr.classes.php";
             }
 
         }
-    }
-    $register = new RegisterContr($user,$completeName,$email,$password,$userPhoto,$confirmPassword,$telephone);
+   $register = new RegisterContr($user,$completeName,$email,$password,$userPhoto,$confirmPassword,$telephone);
     $register -> registerUser();
     header("location: ../Views/Register.php?error=none");
+    }
 ?>

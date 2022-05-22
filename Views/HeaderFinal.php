@@ -72,42 +72,56 @@
                     
                     ?> 
                 </li>
+                <li>
+                <?php
+                 if(isset($_SESSION["user_email"])){
+                    $compare=$_SESSION["user_type"];
+                        if($compare==1){
+                    ?>
+                         <a href="Category.php">AGREGAR CATEGORIA</a>
+                    <?php
+                        }
+                    }
+                    
+                    ?> 
+                </li>
 
                 </div>
 
                 <div class="searchNav">
                 <input type="text" placeholder="Teclea Aquí">
-                <button type="submit" onclick="window.location='../Views/Search.php'">Search</button>
+                <button type="submit" onclick="window.location='../Views/SearchPage.php'">Search</button>
 
                 </div>
 
 
                 <div class="LoginStatus">
-               
+                <ul>
                 <?php
                         if(isset($_SESSION["user_email"])){
                     ?>
-                    
-                        
-                        <form action="../Classes/endSession.classes.php" method="post">
-                            <ul>
                         <?php echo $_SESSION["user_email"];?>
-                        </ul>
-                        <input class="nav-item" type="submit" name="submit" value="Salir">
-                      
+                        <ul>
+                        <form action="../Classes/endSession.classes.php" method="post">
+                        <input class="nav-item" type="submit" name="submit" value="Salir"style= "border-radius: 15px;  color: #fff;
+                        background-color: #eb2651;;
+                        border-color: #b42424;  padding: 5px;
+                        position: relative;
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+                        text-decoration: none;
+                        text-align: justify;">
                         </form>
+                        </ul>
                     <?php
                         }
                         else {
                     ?> 
-                    <ul>
                         <a href="../Views/Login.php" >SIGN-UP</a>
-                        </ul>
                     <?php
                         }
                     ?>  
                 
-               
+                </ul>
 
                 </div>
        

@@ -57,3 +57,5 @@ creadopor,lastupdateby,lastupdatebydate) VALUES("Jordan Jones","jojo@gmail.com",
 
 select * from USUARIO;
 
+
+

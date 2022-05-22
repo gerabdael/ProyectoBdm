@@ -9,5 +9,6 @@ class newContr extends news{
         public function newsfills(){
             $this -> newsfill($this->idnews);
         }
+       
     }
     ?>

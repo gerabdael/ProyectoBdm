@@ -86,3 +86,18 @@ INNER JOIN USUARIO AS b ON b.ID_user = a.creadapor;
 
 
 select * from View_CATEGORIAS;
+
+
+
+
+Create view View_CategoriaColor as SELECT 
+a.ID_Noticia,a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.NombreCat,b.Color,b.ordercategory
+FROM noticias as a 
+INNER JOIN CATEGORIAS AS b ON b.ID_Catego = a.categoaux;
+
+
+select * from View_CategoriaColor where Color = 'rojo';
+
+
+
+

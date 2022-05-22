@@ -9,6 +9,7 @@ class RegisterContr extends Register{
         private $telephone;
         private $userPhoto;
 
+
         public function __construct($user,$completeName,$email,$password,$userPhoto,$confirmPassword,$telephone)
         {
             $this->user=$user;
