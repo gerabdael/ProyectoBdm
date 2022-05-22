@@ -91,11 +91,19 @@ select * from View_CATEGORIAS;
 
 
 Create view View_CategoriaColor as SELECT 
+<<<<<<< HEAD
 a.ID_Noticia,a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.NombreCat,b.Color,b.ordercategory
+=======
+a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.NombreCat,b.Color
+>>>>>>> main
 FROM noticias as a 
 INNER JOIN CATEGORIAS AS b ON b.ID_Catego = a.categoaux;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 select * from View_CategoriaColor where Color = 'rojo';
 
 
