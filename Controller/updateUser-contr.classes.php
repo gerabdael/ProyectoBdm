@@ -25,10 +25,10 @@ class UpdateContr extends Update{
                 header("location: ../Views/Profile.php?error=emptyInput");
                 exit();
             }
-                /*if($this->chkpswrd($this->password)==false){
+                if($this->chkpswrd($this->password)==false){
                 header("location: ../Views/Profile.php?error=invalidPwd");
                 exit();
-            } */
+            } 
             // if($this->checkUser($this->email,$this->user)==false){
             //     header("location: ../Views/Profile.php?error=userCheck");
             //     exit();

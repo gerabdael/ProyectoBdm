@@ -62,7 +62,7 @@
         <div class="container_news">
           <div class="col-md-12">
             <div id="ajaxResponse">
-
+            
           </div>
         </div>
         </div>

@@ -26,10 +26,10 @@ class RegisterContr extends Register{
                 header("location: ../Views/Register.php?error=emptyInput");
                 exit();
             }
-/*             if($this->chkpswrd($this->password)==false){
+            if($this->chkpswrd($this->password)==false){
                 header("location: ../Views/Register.php?error=invalidPwd");
                 exit();
-            } */
+            }
             if($this->matchPwd()==false){
                 header("location: ../Views/Register.php?error=matchPwd");
                 exit();

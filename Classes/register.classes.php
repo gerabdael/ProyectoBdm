@@ -18,17 +18,17 @@ class Register extends Dbh{
         }
         return $check;
     }
-    // protected function chkpswrd($password){
-    //     $result;
-    //     $regx="/^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
-    //     $match = preg_match($regx,$password);
-    //     if($match==0){
-    //         $result=false;
-    //     }else{
-    //         $result=true;
-    //     }
-    //     return $result;
-    // }
+    protected function chkpswrd($password){
+        $result;
+        $regx="/^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
+        $match = preg_match($regx,$password);
+        if($match==0){
+            $result=false;
+        }else{
+            $result=true;
+        }
+        return $result;
+    }
 
 
     protected function register($completeName,$email,$password,$userPhoto, $user,$telephone){
