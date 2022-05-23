@@ -1,7 +1,7 @@
 <?php 
     session_start();
     $userID= $_SESSION["user_ID"];
-    include('./header2.php')?>  
+    include('./HeaderFinal.php')?>  
 
 <script>
 $(document).ready(function(){

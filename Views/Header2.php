@@ -105,7 +105,7 @@
                         <form action="../Classes/endSession.classes.php" method="post">
                         <input class="nav-item" type="submit" name="submit" value="Salir"style= "border-radius: 15px;  color: #fff;
                         background-color: #eb2651;;
-                        border-color: #b42424;  padding: 5px;
+                        border-color: #b42424;  padding: 15px;
                         position: relative;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
                         text-decoration: none;

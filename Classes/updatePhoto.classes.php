@@ -22,8 +22,8 @@ class UpdatePhoto extends Dbh{
         $_SESSION["user_nickname"] = $userInfo[0]["alias"];
         $_SESSION["user_phone"] = $userInfo[0]["telefono"];
         $_SESSION["user_photo"] = $userInfo[0]["FotoUser"];
-        $_SESSION["user_email"] = $userInfo[0]["email"];
-        $_SESSION["user_password"] = $userInfo[0]["constraseña"];
+       // $_SESSION["user_email"] = $userInfo[0]["email"];
+       // $_SESSION["user_password"] = $userInfo[0]["constraseña"];
         $stmt = null;
         $user=null;
         }
