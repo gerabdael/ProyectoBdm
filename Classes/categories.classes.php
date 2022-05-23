@@ -7,7 +7,7 @@ class Category extends Dbh{
         
     }
     public function fill_cat(){
-    $cat = $this->connect()->prepare('SELECT ID_Catego,NombreCat FROM categorias;');
+    $cat = $this->connect()->prepare('SELECT * from View_CATEGORIAS2;');
     $cat->execute(array());
     $catInfo = $cat->fetchAll((PDO::FETCH_ASSOC));
     $catCount = $cat-> rowCount();

@@ -79,23 +79,19 @@ select * from View_UserStatus;
 
 
 #vista categorias
-CREATE VIEW View_CATEGORIAS as SELECT 
-a.NombreCat,a.descripcion,a.ordercategory,a.diacreacion,b.nombreCompleto
+CREATE VIEW View_CATEGORIAS2 as SELECT 
+a.ID_Catego,a.NombreCat,a.descripcion,a.ordercategory,a.diacreacion,b.nombreCompleto
 from CATEGORIAS as a
 INNER JOIN USUARIO AS b ON b.ID_user = a.creadapor;
 
 
-select * from View_CATEGORIAS;
+select * from View_CATEGORIAS2;
 
 
 
 
-Create view View_CategoriaColor as SELECT 
-<<<<<<< HEAD
-a.ID_Noticia,a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.NombreCat,b.Color,b.ordercategory
-=======
-a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.NombreCat,b.Color
->>>>>>> main
+Create view View_CategoriaColor2 as SELECT 
+a.ID_Noticia,a.titulo,a.descripcion,a.texto,a.country,a.suburbio,a.ciudad,a.Image,a.Diaeventos,a.Firma,a.likes,b.ID_Catego,b.NombreCat,b.Color,b.ordercategory
 FROM noticias as a 
 INNER JOIN CATEGORIAS AS b ON b.ID_Catego = a.categoaux;
 
@@ -107,5 +103,9 @@ INNER JOIN CATEGORIAS AS b ON b.ID_Catego = a.categoaux;
 select * from View_CategoriaColor where Color = 'rojo';
 
 
+
+
+
+#Views apartir de los seelects
 
 
