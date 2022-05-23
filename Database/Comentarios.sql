@@ -25,3 +25,17 @@ INDEX(PARENT_ID),
 FOREIGN KEY(ID_COMENTARIO) REFERENCES COMENTARIOS(ID_COMENTARIO),
 FOREIGN KEY(ID_NOTICIA) REFERENCES NOTICIAS(ID_Noticia)
 );
+
+SELECT * FROM COMENTARIOS;
+
+SELECT * FROM COMENTARIOS_NOTICIA;
+
+iNSERT INTO COMENTARIOS(Comentario,fecha_creacion,lastupdate,lastupdate_by,active) VALUES ('JALO',sysdate(),sysdate(),9,true);
+iNSERT INTO COMENTARIOS(Comentario,fecha_creacion,lastupdate,lastupdate_by,active) VALUES ('aasdasd',sysdate(),sysdate(),9,true);
+iNSERT INTO COMENTARIOS(Comentario,fecha_creacion,lastupdate,lastupdate_by,active) VALUES ('que onda',sysdate(),sysdate(),9,true);
+iNSERT INTO COMENTARIOS(Comentario,fecha_creacion,lastupdate,lastupdate_by,active) VALUES ('aaay',sysdate(),sysdate(),9,true);
+
+
+iNSERT INTO COMENTARIOS_NOTICIA(ID_COMENTARIO,ID_NOTICIA,fecha_creacion,lastupdate,lastupdate_by,active,PARENT_ID) values (1,6,sysdate(),sysdate(),9,true,null);
+
+ 

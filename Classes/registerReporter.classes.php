@@ -32,7 +32,12 @@ class Register extends Dbh{
 
 
     protected function register($completeName,$email,$password,$userPhoto, $user,$telephone){
-        $stmt = $this->connect()->prepare('INSERT INTO USUARIO(nombreCompleto,email,contraseña,FotoUser,alias,diaregistro,telefono,activo,tipoU,StatusU,creadopor) VALUES(?,?,?,?,?,sysdate(),?,true,2,"A",117);');
+        //$stmt = $this->connect()->prepare('INSERT INTO USUARIO(nombreCompleto,email,contraseña,FotoUser,alias,diaregistro,telefono,activo,tipoU,StatusU,creadopor) VALUES(?,?,?,?,?,sysdate(),?,true,2,"A",117);');
+        
+        $stmt = $this->connect()->prepare('CALL sp_Usuario("b",null,?,?,?,?,?,?,2,"A",117,null,null);');
+        
+
+
         $hashPwd = password_hash($password,PASSWORD_DEFAULT);
         if (!$stmt-> execute(array($completeName,$email,$hashPwd,$userPhoto,$user,$telephone))) {
             $stmt = null;
