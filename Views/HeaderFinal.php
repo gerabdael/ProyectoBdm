@@ -86,6 +86,22 @@
                     ?> 
                 </li>
 
+                <li>
+                <?php
+                 if(isset($_SESSION["user_email"])){
+                    $compare=$_SESSION["user_type"];
+                        if($compare==1){
+                    ?>
+                         <a href="AproveNewsUser.php">  NOTICIAS PENDIENTES </a>
+                    <?php
+                        }
+                    }
+                    
+                    ?> 
+                </li>
+
+
+
                 </div>
 
                 <div class="searchNav">
