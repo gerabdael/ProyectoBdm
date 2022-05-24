@@ -55,7 +55,15 @@ creadopor,lastupdateby,lastupdatebydate) VALUES("Gera abdael","Ojitos@gmail.com"
 insert into USUARIO(nombreCompleto,email,contraseña,FotoUser,alias,diaregistro,telefono,activo,tipoU,StatusU,
 creadopor,lastupdateby,lastupdatebydate) VALUES("Jordan Jones","jojo@gmail.com","xdxd",null,"jojo",sysdate(),8181292325,true,3,"I",117,null,null);
 
+
 select * from USUARIO;
+
+
+
+call sp_Usuario('a',9,'','','','','','','','','','','');
+
+call sp_Usuario('c',8,'','','','','','',1,'A','','','');
+
 
 
 

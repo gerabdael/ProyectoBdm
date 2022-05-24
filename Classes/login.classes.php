@@ -24,7 +24,7 @@ class Login extends Dbh{
 
             exit();    
         }else if($checkPwd==true){
-            $user = $this->connect()->prepare('SELECT ID_user,nombreCompleto,alias,FotoUser,telefono,tipoU FROM usuario where email=?;');
+            $user = $this->connect()->prepare('SELECT * from View_OnlyUserInfo where email=?;');
             $user->execute(array($email));
             $userInfo = $user->fetchAll((PDO::FETCH_ASSOC));
             session_start();

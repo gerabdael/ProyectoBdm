@@ -7,7 +7,7 @@ class newFill extends Dbh{
         
     }
     public function newsfill(){
-    $news = $this->connect()->prepare('SELECT titulo,descripcion,Image FROM noticias where new_status="Publicada" order by id_noticia desc;');
+    $news = $this->connect()->prepare('SELECT * FROM SimpleNewsView where new_status="Publicada" order by id_noticia desc;');
     $news->execute(array());
     $newsInfo = $news->fetchAll((PDO::FETCH_ASSOC));
     ?>
