@@ -1,5 +1,11 @@
 @import url('http://fonts.cdnfonts.com/css/salma-pro-medium-narrow');
 
+.ComentDelComent{
+    align-items: center;
+    margin: auto;
+    padding-left: 55rem;
+}
+
 .NewStuff {
     position: relative;
     margin-top: 0%;
@@ -7,13 +13,9 @@
 
     margin-bottom: 0%;
     padding-bottom: 15rem;
-
-    
 }
 
 .NuevaNoticia{
-
-    
     align-items: center;
     margin: auto;
     padding-left: 10%;

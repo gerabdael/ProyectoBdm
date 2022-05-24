@@ -6,8 +6,8 @@
 ?>
  
 <div class="container" style="margin-top: 1rem;"> 
+<div class="bs-docs-section" id="myGroup" style="padding: 3rem;">
 
-<div class="bs-docs-section" id="myGroup" style="padding: 5rem; padding-bottom: 10%;">
 <div class="row">
     <div class="col-lg-12">
     <div class="bs-component">
@@ -56,6 +56,8 @@
           </div>
           </div>
 
+
+
       <div class="card-footer text-muted">
       <?php echo  $_SESSION["Diaeventos"]?><br>
       <div class="news_comments">
@@ -77,8 +79,75 @@
 </div>
 </div>
 
+
 </div>
 </div>
+
+<div class="container">
+<div class="row">
+
+<div class="card mb-3" style="max-width: 40rem;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://i.ibb.co/xstT9Hx/7by1wlrdjob61.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Username</h5>
+                  <p class="card-text">Este es un comentario</p>
+                  <p>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#CollapseComments" role="button" aria-expanded="false" aria-bs-controls="CollapseComments">Comment</a>
+                  </p>
+
+                  <div class="collapse" id="CollapseComments">
+          <div class="card-body">
+
+          <div class="d-flex flex-row align-items-start">
+            <textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
+            <div class="mt-2 text-right">
+              <button class="btn btn-primary btn-sm shadow-none" type="button">Post comment</button>
+              <button class="btn btn-outline-primary btn-sm ml-1 shadow-none" type="button">Cancel</button>
+            </div>
+          
+          </div>
+          </div>
+
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="row" style="padding-left: 5rem">
+          <div class="col">
+          <div class="collapse multi-collapse" id="CollapseComments">
+
+          <div class="card mb-3" style="max-width: 55rem;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://i.ibb.co/xstT9Hx/7by1wlrdjob61.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Username</h5>
+                  <p class="card-text">Este es un comentario</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          </div>
+          </div>
+
+</div>
+
+
+</div>
+
 
     <!-- noticias grid-->
     <?php include('./footer.php')?>
