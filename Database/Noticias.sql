@@ -80,7 +80,11 @@ Foreign key(categoaux) references CATEGORIAS(ID_Catego)
 
 );
 
+
 alter table noticiero_web.noticias ADD descripcion longtext AFTER TITULO;
+
+
+
 
 delete from NOTICIAS WHERE ID_Noticia = 1;
 

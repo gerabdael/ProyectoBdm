@@ -20,7 +20,7 @@ class Update extends Dbh{
     }
     protected function chkpswrd($password){
         $result;
-        $regx="/^\S*(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[@$!%?&#!_-])[a-zA-Z0-9@$!%?&#!_-]{8,}$/";
+        $regx="/^\S*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%?&#!_-])[a-zA-Z0-9@$!%*?&#!_-]{8,}$/";
         $match = preg_match($regx,$password);
         if($match==0){
             $result=false;
@@ -39,7 +39,7 @@ class Update extends Dbh{
             header("location: ../Views/Profile.php?error=updatefailed");
              exit();
         }            
-        $user = $this->connect()->prepare('SELECT ID_user,nombreCompleto,alias,FotoUser,telefono FROM usuario where email=?;');
+        $user = $this->connect()->prepare('SELECT * from View_OnlyUserInfo where email=?;');
         $user->execute(array($email));
         $userInfo = $user->fetchAll((PDO::FETCH_ASSOC));
         session_start();

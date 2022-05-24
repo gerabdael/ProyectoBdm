@@ -12,7 +12,7 @@ class cat extends Dbh{
     }
     
     public function catfill(){
-        $category = $this->connect()->prepare('SELECT ID_Catego,NombreCat,descripcion,Color FROM categorias where Activa=1;');
+        $category = $this->connect()->prepare('SELECT * from View_OnlyCatsColors where Activa=1');
         $category->execute(array());
         $catInfo = $category->fetchAll((PDO::FETCH_ASSOC));
         $catCount = $category-> rowCount();

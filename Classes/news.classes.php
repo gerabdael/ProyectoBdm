@@ -2,7 +2,7 @@
 include "../Classes/dbh.classes.php";
 class news extends Dbh{
         protected function newsfill($idnews){
-        $news = $this->connect()->prepare('SELECT * FROM view_categoriacolor WHERE ID_Noticia=?;');
+        $news = $this->connect()->prepare('SELECT * FROM View_CategoriaColor2 WHERE ID_Noticia=?;');
         $news->execute(array($idnews));
         $newsCaracteristicas = $news->fetchAll((PDO::FETCH_ASSOC));
         session_start();
