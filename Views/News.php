@@ -1,4 +1,5 @@
 <?php include('./Header2.php');
+require( '../Classes/comments.classes.php');
   if(!isset($_SESSION)) 
   { 
       session_start(); 
@@ -6,8 +7,8 @@
 ?>
  
 <div class="container" style="margin-top: 1rem;"> 
+<div class="bs-docs-section" id="myGroup" style="padding: 3rem;">
 
-<div class="bs-docs-section" id="myGroup" style="padding: 5rem; padding-bottom: 10%;">
 <div class="row">
     <div class="col-lg-12">
     <div class="bs-component">
@@ -33,40 +34,54 @@
         <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
         </svg>
       </button>
-
-      <button type="button" class="btn btn-outline-secondary">
+    <form action="../Model/likes_inc.php" method="POST">
+      <button type="submit" name="submit_likes" class="btn btn-outline-secondary">
         
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
           <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
         </svg>
                   <?php echo  $_SESSION["likes"]?>
         </button>
+      </form>
+      <form action="../Model/likes_inc.php" method="POST">
+      <button type="submit" name="submit_dislikes" class="btn btn-outline-secondary">
+        
+                 Dislike
+        </button>
+      </form>
       </div>
 
       <div class="collapse" id="collapseExample">
           <div class="card-body">
-
-          <div class="d-flex flex-row align-items-start">
-            <textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
-            <div class="mt-2 text-right">
-              <button class="btn btn-primary btn-sm shadow-none" type="button">Post comment</button>
+          <form action="../Model/commentchild_inc.php" method="POST"> 
+            <div class="d-flex flex-row align-items-start">
+              <textarea class="form-control ml-1 shadow-none textarea" name="comment-text"></textarea>
+            </div>
+              <div class="mt-2 text-right">
+              <button class="btn btn-primary btn-sm shadow-none" name="comment" type="submit">Post comment</button>
               <button class="btn btn-outline-primary btn-sm ml-1 shadow-none" type="button">Cancel</button>
+            </form>
             </div>
           
           </div>
           </div>
 
+<div class="container">
+<div class="row">
+        <?php
+        $newscommentsfill = new commentsFill();
+        $newscommentsfill -> commentfill($_SESSION["ID_Noticia"]);
+        ?> 
+
+</div>
+
+
+</div>
+
+
+
       <div class="card-footer text-muted">
-      <?php echo  $_SESSION["Diaeventos"]?><br>
-      <div class="news_comments">
-        <div class="container_news">
-          <div class="col-md-12">
-            <div id="ajaxResponse">
-            
-          </div>
-        </div>
-        </div>
-      </div>
+
       </div>
 
 
@@ -77,8 +92,12 @@
 </div>
 </div>
 
+
 </div>
 </div>
+
+
+
 
     <!-- noticias grid-->
     <?php include('./footer.php')?>

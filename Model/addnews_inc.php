@@ -8,9 +8,11 @@ session_start();
         $noticia = $_POST["noticia"];
         $firma = $_POST["firma"];
         $city = $_POST["city"];
-        $sub = $_POST["sub"];
+        $sub = $_POST["sub"]; 
+        $Keyword= $_POST["keyword"];
         $country = $_POST["country"];
         $fpub= $_POST["fpub"];
+       
         $fileToUpload = $_FILES["fileToUpload"]["name"];
         $userReporter=  $_SESSION["user_ID"]; 
         $Category = $_POST["category"];
@@ -29,19 +31,19 @@ session_start();
             }
 
         } 
-    $addnews = new AddNewsContr($title,$descripcion,$noticia,$firma,$city,$sub,$country, $fpub,$fileToUpload,$userReporter, $Category );
+    $addnews = new AddNewsContr($title,$descripcion,$noticia,$firma,$city,$sub,$country, $fpub,$Keyword,$fileToUpload,$userReporter, $Category );
     $addnews -> addNews();
     header("location: ../Views/AddNews.php?error=none");
     }
 
     if(isset($_POST["submit_update"])){
         $title = $_POST["title"];
-       
         $descripcion = $_POST["descripcion"];
         $noticia = $_POST["noticia"];
         $firma = $_POST["firma"];
         $city = $_POST["city"];
         $sub = $_POST["sub"];
+        $Keyword= $_POST["keyword"];
         $country = $_POST["country"];
         $fpub= $_POST["fpub"];
         $fileToUpload = $_FILES["fileToUpload"]["name"];
@@ -62,7 +64,7 @@ session_start();
             }
 
         } 
-    $addnews = new AddNewsContr($title,$descripcion,$noticia,$firma,$city,$sub,$country, $fpub,$fileToUpload,$userReporter, $Category );
+    $addnews = new AddNewsContr($title,$descripcion,$noticia,$firma,$city,$sub,$country, $fpub,$Keyword,$fileToUpload,$userReporter, $Category );
     $addnews -> updatedNews();
     header("location: ../Views/AddNews.php?error=none");
     }

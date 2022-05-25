@@ -22,11 +22,17 @@ class UpdateContr extends Update{
 
         public function updateUser(){
             if($this->empyInputs()== false){
-                header("location: ../Views/Profile.php?error=emptyInput");
+                echo "<script type='text/javascript'>
+                alert('Faltan Campos');
+                window.open('../Views/Profile.php','_self');
+                </script>";
                 exit();
             }
                 if($this->chkpswrd($this->password)==false){
-                header("location: ../Views/Profile.php?error=invalidPwd");
+                    echo "<script type='text/javascript'>
+                    alert('Contraseña Invalida');
+                    window.open('../Views/Profile.php','_self');
+                    </script>";
                 exit();
             } 
             // if($this->checkUser($this->email,$this->user)==false){

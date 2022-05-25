@@ -27,6 +27,12 @@ class catContr extends cat{
         }
 
 
+        
+  public function SearchFromNavBar2($BusquedaWhat){
+    $this->BusquedaWhat=$BusquedaWhat;
+    $this -> SearchFromNavBar($this->BusquedaWhat);
+}
+
        
     }        
 ?>

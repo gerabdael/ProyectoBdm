@@ -1,31 +1,6 @@
-DELIMITER &&
-Create Function ActDesNoticia(idnoticia int)
-returns boolean
-DETERMINISTIC
-begin
-declare ActiveAux BOOLEAN;
 
-SET ActiveAux = (SELECT activo from NOTICIAS WHERE ID_Noticia = idnoticia);
+CREATE TRIGGER User_TypesCHeck BEFORE INSERT ON USER_TYPES
+       FOR EACH ROW SET new.active=TRUE;
 
-IF ActiveAux = FALSE
-THEN
-UPDATE NOTICIAS
-SET activo = TRUE
-WHERE ID_Noticia = idnoticia;
-
-ELSEIF
-
-ActiveAux = TRUE
-THEN
-UPDATE NOTICIAS
-SET activo = FALSE
-WHERE ID_Noticia = idnoticia;
-
-
-END IF;
-
-
-RETURN (ActiveAux);
-
-END &&
-DELIMITER ;
+CREATE TRIGGER User_STATUSCHeck BEFORE INSERT ON USER_STATUS
+       FOR EACH ROW SET new.active=TRUE;

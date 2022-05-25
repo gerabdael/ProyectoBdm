@@ -1,6 +1,6 @@
 <?php 
 include('./HeaderFinal.php');
-require( '../Classes/newsAproveCharge.classes.php');
+require( '../Classes/newsCompleteCharge.classes.php');
 ?>
 
 
@@ -22,8 +22,8 @@ require( '../Classes/newsAproveCharge.classes.php');
   <tbody>
     <?php
     
-        $fillnewsAproved= new newAprovefill();
-        $fillnewsAproved-> newsAprovefill( $_SESSION["user_ID"]);
+        $fillnewsAproved= new newCompletefill();
+        $fillnewsAproved-> newscompletefill( $_SESSION["user_ID"]);
       ?>
 
   </tbody>

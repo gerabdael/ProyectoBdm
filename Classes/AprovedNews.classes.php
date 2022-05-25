@@ -32,7 +32,7 @@ class Aprovednews extends Dbh{
         $stmt = null;
     }
     protected function modifie($idhiddenid,$idhiddendesc,$idhiddentitle,$commentarioAdmin){
-        $user =$this->connect()->prepare('SELECT ID_Noticia,titulo,descripcion,texto,country,suburbio,ciudad,Image,Diaeventos,Firma FROM NOTICIAS WHERE ID_NOTICIA = ?');
+        $user =$this->connect()->prepare('SELECT ID_Noticia,titulo,descripcion,texto,country,suburbio,ciudad,KeyWord,Image,Diaeventos,Firma FROM NOTICIAS WHERE ID_NOTICIA = ?');
         if($user->execute(array($idhiddenid))){
         $newsCaracteristicas = $user->fetchAll((PDO::FETCH_ASSOC));
         session_start();
@@ -46,6 +46,7 @@ class Aprovednews extends Dbh{
         $_SESSION["DiaeventosMod"]= $newsCaracteristicas[0]["Diaeventos"]; 
         $_SESSION["FirmaMod"]= $newsCaracteristicas[0]["Firma"]; 
         $_SESSION["textoMod"]= $newsCaracteristicas[0]["texto"]; 
+        $_SESSION["KeywordMod"]= $newsCaracteristicas[0]["KeyWord"]; 
         header("location: ../Views/UpdateNews.php?error=none"); 
      }
         // $stmt = $this->connect()->prepare('INSERT INTO COMENTAPROVED(ComentarioSet,ID_NoticiaFind,ID_ReporteroAux) VALUES(?,?,?);');

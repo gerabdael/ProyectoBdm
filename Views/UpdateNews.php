@@ -32,15 +32,11 @@ require( '../Classes/categories.classes.php');
                 </div>
                 <div class="mb-3">
                     <label for="InputEmail" >Descripcion</label>
-                    <textarea class="form-control" id="DescriptionTextarea" name="descripcion" rows="3" style="height: 53px;">
-                    <?php echo $_SESSION["descripcionMod"];?>
-                    </textarea>
+                    <textarea class="form-control" id="DescriptionTextarea" name="descripcion" rows="3" style="height: 53px;"><?php echo $_SESSION["descripcionMod"];?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="InputEmail" >Noticia</label>
-                    <textarea class="form-control" id="newsTextarea" name="noticia" rows="3" style="height: 53px;">
-                        <?php echo $_SESSION["textoMod"];?>
-                    </textarea>
+                    <textarea class="form-control" id="newsTextarea" name="noticia" rows="3" style="height: 53px;"><?php echo $_SESSION["textoMod"];?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="InputUser" >Firma</label>
@@ -57,6 +53,10 @@ require( '../Classes/categories.classes.php');
                 <div class="mb-3">
                     <label for="InputUser" >País</label>
                     <input type="text" value="<?php echo $_SESSION["countryMod"];?>" class="form-control nameInput" name= "country"id="country" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="InputUser" >Palbra Clave</label>
+                    <input type="text" value="<?php echo $_SESSION["KeywordMod"];?>" class="form-control nameInput" name= "keyword"id="keyword" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresa tu correo registrado" aria-describedby="emailHelp">
                 </div>
                 <label for="date">Fecha de publicacion:</label><div></div>
                 <input type="date" value="<?php echo $_SESSION["DiaeventosMod"];?>" id="start" name="fpub" id="newsDate" name="fecha" min="1960-01-01" max="2020-12-31" required autofocus>

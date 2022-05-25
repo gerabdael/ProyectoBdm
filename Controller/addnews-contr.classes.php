@@ -8,30 +8,39 @@ class AddNewsContr extends AddNews{
     private $noticia ;
     private $firma ;
     private $city ;
+ 
     private $sub ;
     private $country ;
-    private  $fpub;
+    private  $fpub;  
+     private $Keyword;
     private $fileToUpload;
     private $userReporter;
 
-    public function __construct($title,$descripcion,$noticia,$firma,$city,$sub,$country,$fpub,$fileToUpload,$userReporter,$Category)
+    public function __construct($title,$descripcion,$noticia,$firma,$city,$sub,$country,$fpub,$Keyword,$fileToUpload,$userReporter,$Category)
     {
         $this->title = $title;
-        $this->Category = $Category;
+        
         $this->descripcion = $descripcion;
         $this->noticia = $noticia;
         $this->firma = $firma;
         $this->city = $city;
+       
         $this->sub = $sub;
-        $this->country = $country;
-        $this->fpub = $fpub;
+        $this->country = $country; 
+            $this->fpub = $fpub;
+        $this->Keyword = $Keyword;
+    
         $this->fileToUpload = $fileToUpload;
         $this->userReporter = $userReporter;
+        $this->Category = $Category;
 
     }
     public function addNews(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AddNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Faltan Campos');
+            window.open('../Views/AddNews.php','_self');
+            </script>";
             exit();
         }else{
         $this -> insertNews($this->title,
@@ -39,9 +48,11 @@ class AddNewsContr extends AddNews{
         $this->noticia,
         $this->firma,
         $this->city,
+       
         $this->sub ,
         $this->country ,
         $this->fpub ,
+         $this->Keyword,
         $this->fileToUpload,
         $this->userReporter,
          $this->Category,);            
@@ -50,7 +61,10 @@ class AddNewsContr extends AddNews{
     }
     public function updatedNews(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AddNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Faltan Campos');
+            window.open('../Views/AddNews.php','_self');
+            </script>";
             exit();
         }else{
         $this -> updateNews($this->title,
@@ -58,9 +72,11 @@ class AddNewsContr extends AddNews{
         $this->noticia,
         $this->firma,
         $this->city,
+       
         $this->sub ,
         $this->country ,
         $this->fpub ,
+         $this->Keyword,
         $this->fileToUpload,
         $this->userReporter,
          $this->Category,);            
@@ -77,9 +93,11 @@ class AddNewsContr extends AddNews{
         $this->noticia||
         $this->firma||
         $this->city||
+       
         $this->sub ||
         $this->country||
-        $this->fpub ||
+        $this->fpub || 
+        $this->Keyword||
         $this->fileToUpload)){
             $result = false;
         }else{

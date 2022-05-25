@@ -61,6 +61,22 @@
                 </li>
                 <li>
                 <?php
+                        
+                    ?>
+                <?php
+                 if(isset($_SESSION["user_email"])){
+                $compare=$_SESSION["user_type"];
+                        if($compare==2){
+                    ?>
+                          <a href="AproveNewsUser.php">Noticias por aprobar</a>
+                    <?php
+                        }
+                    }
+                    
+                    ?> 
+                </li>
+                <li>
+                <?php
                  if(isset($_SESSION["user_email"])){
                 $compare=$_SESSION["user_type"];
                         if($compare==1){
@@ -92,7 +108,7 @@
                     $compare=$_SESSION["user_type"];
                         if($compare==1){
                     ?>
-                         <a href="AproveNewsUser.php">  NOTICIAS PENDIENTES </a>
+                         <a href="AproveNews.php">  NOTICIAS PENDIENTES </a>
                     <?php
                         }
                     }
@@ -104,10 +120,12 @@
 
                 </div>
 
-                <div class="searchNav">
-                <input type="text" placeholder="Teclea Aquí">
-                <button type="submit" onclick="window.location='../Views/SearchPage.php'">Search</button>
 
+                <div class="searchNav">
+                <form action="../Model/category_inc.php" method="post">
+                <input type="text" name ="InfoBuscar" placeholder="Teclea Aquí">
+                <button type="submit" name="BtnBuscar">Search</button>
+                </form>
                 </div>
 
 

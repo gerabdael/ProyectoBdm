@@ -28,6 +28,23 @@ include "../Controller/category-contr.classes.php";
               $cat->delCategory($idhiddenid); 
               header("location: ../Views/Category.php");
              }
+
+             if(isset($_POST["BtnBuscar"])){
+                $BusquedaWhat = $_POST["InfoBuscar"];
+               // echo "<script type='text/javascript'>
+                //alert('$BusquedaWhat');
+               // window.open('../Views/Index.php?','_self');
+               // </script>";
+               $NombreCat="";
+               $user="";
+               $descripcion="";
+               $color="";
+               $Search = new catContr( $NombreCat,$user,$descripcion,$color);
+               $Search->SearchFromNavBar2($BusquedaWhat);
+
+               //header("location: ../Views/SearchPage.php");
+
+               }
       
 
 ?>

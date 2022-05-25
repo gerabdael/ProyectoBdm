@@ -17,7 +17,10 @@ class AprovednewsContr extends Aprovednews{
 
     public function aproved(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AproveNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Error Campos');
+            window.open('../Views/AproveNews.php','_self');
+            </script>";
             exit();
         }else{
             $this -> aprove($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);    
@@ -27,7 +30,10 @@ class AprovednewsContr extends Aprovednews{
 
     public function denied(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AproveNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Error Campos');
+            window.open('../Views/AproveNews.php','_self');
+            </script>";
             exit();
         }else{
              $this -> denie($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
@@ -36,7 +42,10 @@ class AprovednewsContr extends Aprovednews{
     }
     public function modified(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AproveNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Error Campos');
+            window.open('../Views/AproveNews.php','_self');
+            </script>";
             exit();
         }else{
              $this -> modifie($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);
@@ -45,7 +54,10 @@ class AprovednewsContr extends Aprovednews{
     }
     public function deleted(){
         if($this->empyInputs() == false){
-            header("location: ../Views/AproveNews.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Error Campos');
+            window.open('../Views/AproveNews.php','_self');
+            </script>";
             exit();
         }else{
              $this -> delete($this->idhiddenid,$this->idhiddentitle,$this->idhiddendesc,$this->commentarioAdmin);

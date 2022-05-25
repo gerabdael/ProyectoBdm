@@ -6,7 +6,7 @@ class news extends Dbh{
         $news->execute(array($idnews));
         $newsCaracteristicas = $news->fetchAll((PDO::FETCH_ASSOC));
         session_start();
-        $_SESSION["titulo"] = $newsCaracteristicas[0]["ID_Noticia"]; 
+        $_SESSION["ID_Noticia"] = $newsCaracteristicas[0]["ID_Noticia"]; 
         $_SESSION["titulo"]= $newsCaracteristicas[0]["titulo"]; 
         $_SESSION["descripcion"]= $newsCaracteristicas[0]["descripcion"]; 
         $_SESSION["country"]= $newsCaracteristicas[0]["country"]; 

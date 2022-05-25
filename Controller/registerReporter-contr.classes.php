@@ -22,19 +22,32 @@ class RegisterContr extends Register{
 
         public function registerUser(){
             if($this->empyInputs()== false){
-                header("location: ../Views/RegisterReporter.php?error=emptyInput");
+                echo "<script type='text/javascript'>
+                alert('Error en los campos');
+                window.open('../Views/RegisterReporter.php','_self');
+                </script>";
                 exit();
             }
             if($this->chkpswrd($this->password)==false){
-                header("location: ../Views/RegisterReporter.php?error=invalidPwd");
+                echo "<script type='text/javascript'>
+                alert('Contraseña Invalida');
+                window.open('../Views/RegisterReporter.php','_self');
+                </script>";
                 exit();
             }
             if($this->matchPwd()==false){
-                header("location: ../Views/RegisterReporter.php?error=matchPwd");
+                echo "<script type='text/javascript'>
+                alert('Las contraseñas deben ser iguales');
+                window.open('../Views/RegisterReporter.php','_self');
+                </script>";
                 exit();
             }
             if($this->checkUser($this->email,$this->user)==false){
-                header("location: ../Views/RegisterReporter.php?error=userCheck");
+               
+                echo "<script type='text/javascript'>
+                alert('Error con usuario');
+                window.open('../Views/RegisterReporter.php','_self');
+                </script>";
                 exit();
             } 
             

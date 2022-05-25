@@ -12,7 +12,11 @@ class LoginContr extends Login{
     }
     public function loginUser(){
         if($this->empyInputs() == false){
-            header("location: ../Views/Login.php?error=emptyInput");
+            echo "<script type='text/javascript'>
+            alert('Faltan Campos');
+            window.open('../Views/Login.php?','_self');
+            </script>";
+
             exit();
         }else{
             $this -> sign_in($this->email,$this->pwd);

@@ -18,7 +18,10 @@ class Login extends Dbh{
         $checkPwd = password_verify($password,$pswHashed[0]["contraseña"]);
         if($checkPwd == false){
             $stmt = null;
-            header("location: ../Views/Login.php?error=incorrectPassword");
+            echo "<script type='text/javascript'>
+            alert('Faltan Campos');
+            window.open('../Views/Login.php?','_self');
+            </script>";
 
            
 

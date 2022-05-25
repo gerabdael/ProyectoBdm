@@ -23,19 +23,31 @@ class RegisterContr extends Register{
 
         public function registerUser(){
             if($this->empyInputs()== false){
-                header("location: ../Views/Register.php?error=emptyInput");
+                echo "<script type='text/javascript'>
+                alert('Error Campos');
+                window.open('../Views/Register.php','_self');
+                </script>";
                 exit();
             }
             if($this->chkpswrd($this->password)==false){
-                header("location: ../Views/Register.php?error=invalidPwd");
+                echo "<script type='text/javascript'>
+                alert('Error Contraseña');
+                window.open('../Views/Register.php','_self');
+                </script>";
                 exit();
             }
             if($this->matchPwd()==false){
-                header("location: ../Views/Register.php?error=matchPwd");
+                echo "<script type='text/javascript'>
+                alert('Contraseñas no coinciden');
+                window.open('../Views/Register.php','_self');
+                </script>";
                 exit();
             }
             if($this->checkUser($this->email,$this->user)==false){
-                header("location: ../Views/Register.php?error=userCheck");
+                echo "<script type='text/javascript'>
+                alert('Error Usuario');
+                window.open('../Views/Register.php','_self');
+                </script>";
                 exit();
             } 
             

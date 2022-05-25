@@ -60,5 +60,55 @@ protected function delCat($idhiddenid){
 }
 $news = null;
 }
+
+protected function SearchFromNavBar($BusquedaWhat){
+
+    if($BusquedaWhat != "" && $BusquedaWhat != null){
+    
+        $newsFind = $this->connect()->prepare('SELECT * from NOTICIAS where KeyWord = ?');
+        
+        if(!$newsFind->execute(array($BusquedaWhat))){
+            $newsFind = null;
+            header("location: ../Views/Category.php?error=NohabiaNadaQuebuscar");
+            exit();
+        }else{
+            header("location: ../Views/SearchPage.php");
+            $NombreNoticia = $newsFind->fetchAll((PDO::FETCH_ASSOC));
+            $_SESSION["rOWcoUNTfinded"] = $newsFind-> rowCount();
+           
+    
+            $_SESSION["fINDEDnOTICION"] = $NombreNoticia[0]["titulo"];
+            $_SESSION["fINDEDDescripcion"] = $NombreNoticia[0]["descripcion"];
+            $_SESSION["fINDEDDay"] = $NombreNoticia[0]["DiaNoticia"];
+            $_SESSION["fINDEDIMG"] = $NombreNoticia[0]["Image"];
+    
+            $_SESSION["fINDEDnOTICION2"] = $NombreNoticia[1]["titulo"];
+            $_SESSION["fINDEDDescripcion2"] = $NombreNoticia[1]["descripcion"];
+            $_SESSION["fINDEDDay2"] = $NombreNoticia[1]["DiaNoticia"];
+            $_SESSION["fINDEDIMG2"] = $NombreNoticia[1]["Image"];
+    
+            $_SESSION["fINDEDnOTICION3"] = $NombreNoticia[2]["titulo"];
+            $_SESSION["fINDEDDescripcion3"] = $NombreNoticia[2]["descripcion"];
+            $_SESSION["fINDEDDay3"] = $NombreNoticia[2]["DiaNoticia"];
+            $_SESSION["fINDEDIMG3"] = $NombreNoticia[2]["Image"];
+    
+    
+    
+          
+    
+        }
+        
+     
+       
+    }else{
+        header("location: ../Views/SearchPage.php?error=NohayCampos");
+    }
+    
+    
+    }
+    
+    
+    
+
     }
     ?>
